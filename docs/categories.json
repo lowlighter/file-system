@@ -1,0 +1,11 @@
+{
+    "elements" : {
+        "displayName" : "Elements"
+    },
+    "images" : {
+        "displayName" : "Images"
+    },
+    "interfaces" : {
+        "displayName" : "Interfaces"
+    }
+}

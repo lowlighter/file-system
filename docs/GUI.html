@@ -1,0 +1,3571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A*</title>
+
+    <link type="text/css" rel="stylesheet" href="css/atom-one-dark.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body>
+
+    <aside>
+        <header><h1>A*</h1></header><ul><li><a href="index.html">Home page</a></li></ul><ul><li class="category">Elements</li><li id="menu-Block"><a href="Block.html">Block</a></li><li id="menu-Entry"><a href="Entry.html">Entry</a></li><li id="menu-Utf8"><a href="Utf8.html">Utf8</a></li><li class="category">Images</li><li id="menu-PictureImage"><a href="PictureImage.html">PictureImage</a></li><li class="category">Interfaces</li><li id="menu-Interface"><a href="Interface.html">Interface</a></li><li class="category">Images</li><li id="menu-Image"><a href="Image.html">Image</a></li><li class="category">Interfaces</li><li id="menu-GUI"><a href="GUI.html">GUI</a></li></ul>
+    </aside>
+
+    <main>
+        <header>
+            <h1>GUI</h1>
+        </header>
+        <section>
+            
+
+
+
+        
+        <div class="main-description">
+            
+        </div>
+
+        
+        
+         
+
+<div class="members" id="member-GUI">
+    <header class="class">
+        
+        <h2 class="public">
+            GUI
+             <span class="signature"><span class="signature">(image, context, init)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1669)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Create an graphic user interface to handle Image disks.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            image
+            
+        </td>
+    
+        <td>
+
+<a href="Image.html">Image</a>
+</td>
+    
+        <td>
+            Used image disk
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            context
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Context
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            init
+            
+                <br />
+                <span class="default-value">Default : false</span>
+            
+        </td>
+    
+        <td>
+
+Boolean
+</td>
+    
+        <td>
+            Initialize image with default files
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+
+<div class="members" id="member-_gui_cmd_autocomplete">
+    <header class="function">
+        
+        <h2 class="public">
+            _gui_cmd_autocomplete
+             <span class="signature"><span class="signature">(line, li)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2483)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Autocompletition helper.Parse user input and :- If it's first argument, it will try to complete command name- If it's second or more, it will either try to complete options name or pathInput is completed only if there is only one possibility.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            line
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            User input
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            li
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            User input field
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-_gui_cmd_eval">
+    <header class="function">
+        
+        <h2 class="private">
+            _gui_cmd_eval
+             <span class="signature"><span class="signature">(line, ul)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2309)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="private">private</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Evaluate a command.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            line
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            User input
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            ul
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Unordered List
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-_gui_cmd_new_line">
+    <header class="function">
+        
+        <h2 class="private">
+            _gui_cmd_new_line
+             <span class="signature"><span class="signature">(ul)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2452)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="private">private</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Create a new line into an instance of gui terminal.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            ul
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Unordered List
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-_gui_encrypt">
+    <header class="function">
+        
+        <h2 class="private">
+            _gui_encrypt
+             <span class="signature"><span class="signature">(key, sign)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1794)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="private">private</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Utilitary method to encrypt/decrypt an imafe</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            key
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Encryption/Decryption key
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            sign
+            
+                <br />
+                <span class="default-value">Default : 1</span>
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            Encryption order
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-_gui_icon">
+    <header class="function">
+        
+        <h2 class="private">
+            _gui_icon
+             <span class="signature"><span class="signature">(src, title)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2011)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="private">private</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Create a new DOM Element icon without events.Not directly added to DOM, needs to be done manually.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            src
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Icon source
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            title
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Figcaption content
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-_gui_load_image">
+    <header class="function">
+        
+        <h2 class="private">
+            _gui_load_image
+             <span class="signature"><span class="signature">(ev, callback)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2110)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="private">private</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Utilitary method to help loading user uploaded images.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            ev
+            
+        </td>
+    
+        <td>
+
+Event
+</td>
+    
+        <td>
+            Event data
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            callback
+            
+        </td>
+    
+        <td>
+
+function
+</td>
+    
+        <td>
+            Callback when uploaded file is available
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-_gui_window_dragged">
+    <header class="function">
+        
+        <h2 class="public">
+            _gui_window_dragged
+             <span class="signature"><span class="signature">(ev)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2590)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Callback when a gui window is dragged.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            ev
+            
+        </td>
+    
+        <td>
+
+Event
+</td>
+    
+        <td>
+            Event data
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-_gui_window_dragging">
+    <header class="function">
+        
+        <h2 class="public">
+            _gui_window_dragging
+             <span class="signature"><span class="signature">()</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2581)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Init GUI windows dragging.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-cmd_mkentry">
+    <header class="function">
+        
+        <h2 class="public">
+            cmd_mkentry
+             <span class="signature"><span class="signature">(path, pwd, type)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2518)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Create a new folder.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            path
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Folder to remove
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            pwd
+            
+                <br />
+                <span class="default-value">Default : ""</span>
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Path working directory
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            type
+            
+                <br />
+                <span class="default-value">Default : "Entry.FOLDER"</span>
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            Entry type
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-cmd_remove">
+    <header class="function">
+        
+        <h2 class="public">
+            cmd_remove
+             <span class="signature"><span class="signature">(entry)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2533)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Remove an entry.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            entry
+            
+        </td>
+    
+        <td>
+
+<a href="Entry.html">Entry</a>
+</td>
+    
+        <td>
+            Entry to remove
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_alert">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_alert
+             <span class="signature"><span class="signature">(title, text, callback)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2613)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Display an alert text.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            title
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Title
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            text
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Text
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            callback
+            
+        </td>
+    
+        <td>
+
+function
+</td>
+    
+        <td>
+            Callback called when button is called
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_cmd">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_cmd
+             <span class="signature"><span class="signature">()</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2435)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Add gui terminal icon to desktop and add its trigger.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_config">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_config
+             <span class="signature"><span class="signature">()</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2180)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Display image properties.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_delete">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_delete
+             <span class="signature"><span class="signature">(entry, figure)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1821)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Remove an rentry.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            entry
+            
+        </td>
+    
+        <td>
+
+<a href="Entry.html">Entry</a>
+</td>
+    
+        <td>
+            Entry to remove
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            figure
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Associated icon
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_desktop">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_desktop
+             <span class="signature"><span class="signature">()</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1682)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Display Graphic User Interface desktop.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_display">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_display
+             <span class="signature"><span class="signature">(path, src)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1707)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Display an image.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            path
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Path
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            src
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Source
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_edit">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_edit
+             <span class="signature"><span class="signature">(path, content)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1718)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Edit a file content.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            path
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Path
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            content
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Entry content
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_encrypt">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_encrypt
+             <span class="signature"><span class="signature">()</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1765)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Display encryption tool interface.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_error">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_error
+             <span class="signature"><span class="signature">(e)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2603)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Display an error message.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            e
+            
+        </td>
+    
+        <td>
+
+Error
+</td>
+    
+        <td>
+            Error
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_execute">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_execute
+             <span class="signature"><span class="signature">(str)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1756)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Execute a script file.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            str
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            String to be evalued
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_icon">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_icon
+             <span class="signature"><span class="signature">(entry, context)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1914)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Create a new icon for an entry.Display according icon depending on its extension and create associated callbacks.Also create context menu for it.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            entry
+            
+        </td>
+    
+        <td>
+
+<a href="Entry.html">Entry</a>
+</td>
+    
+        <td>
+            Entry which need a new icon
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            context
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Context where to add icon
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_image_manager">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_image_manager
+             <span class="signature"><span class="signature">()</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2078)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Allow users to upload their own image.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_image_steganography">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_image_steganography
+             <span class="signature"><span class="signature">()</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2090)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Allow users to create an image with steganography.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_list">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_list
+             <span class="signature"><span class="signature">(path, context)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2028)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>List entries of a directory.Will display interactive icons of each entry.Also update contextual menu for current window.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            path
+            
+                <br />
+                <span class="default-value">Default : this.pwd</span>
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Path to directory
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            context
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Current context (window). If not defined, a new one will be created
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_mkdir">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_mkdir
+             <span class="signature"><span class="signature">(path, context)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1848)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Create a new folder.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            path
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Folder to remove
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            context
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Associated context (current window)
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_mkfile">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_mkfile
+             <span class="signature"><span class="signature">(path, context)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1859)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Create a new file.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            path
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Path to where create new file
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            context
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Current context
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_move">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_move
+             <span class="signature"><span class="signature">(entry, figure, context)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1875)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Move entry to another folder.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            entry
+            
+        </td>
+    
+        <td>
+
+<a href="Entry.html">Entry</a>
+</td>
+    
+        <td>
+            Entry to move
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            figure
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Icon associated to current entry
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            context
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Current context (allows to know pwd and to refresh icon)
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_play">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_play
+             <span class="signature"><span class="signature">(path, src)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1745)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Play an audio file.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            path
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Path
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            src
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Source
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_properties">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_properties
+             <span class="signature"><span class="signature">(entry)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2138)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Display entry's properties in a new window.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            entry
+            
+        </td>
+    
+        <td>
+
+<a href="Entry.html">Entry</a>
+</td>
+    
+        <td>
+            Entry
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_rename">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_rename
+             <span class="signature"><span class="signature">(entry, figure, context)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1834)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Allow user to rename an entry.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            entry
+            
+        </td>
+    
+        <td>
+
+<a href="Entry.html">Entry</a>
+</td>
+    
+        <td>
+            Entry to rename
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            figure
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Icon associated to current entry
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            context
+            
+        </td>
+    
+        <td>
+
+DOMElement
+</td>
+    
+        <td>
+            Current context
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_sessions">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_sessions
+             <span class="signature"><span class="signature">()</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2226)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Create sessions manager interface.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-gui_window">
+    <header class="function">
+        
+        <h2 class="public">
+            gui_window
+             <span class="signature"><span class="signature">(title, content)</span><span class="type-signature"> &rarr; {jQueryCollection}</span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 2552)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Open a new window which can display content.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            title
+            
+                <br />
+                <span class="default-value">Default : ""</span>
+            
+        </td>
+    
+        <td>
+
+String
+</td>
+    
+        <td>
+            Window title
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            content
+            
+                <br />
+                <span class="default-value">Default : false</span>
+            
+        </td>
+    
+        <td>
+
+Boolean
+</td>
+    
+        <td>
+            If enabled, returns content instead of window
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+                <li>
+                    <h3>Returns</h3>
+                    <table class="returns">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+jQueryCollection
+</td>
+    
+        <td>Created window (or window content)</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+
+
+
+        
+        
+        
+
+        
+        
+        
+
+
+        </section>
+        <footer>
+            Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Aug 04 2017 15:14:46 GMT+0200 (Paris, Madrid (heure d’été))
+            <br />
+            Embellished by <a href="https://github.com/lowlighter/jsdoc-spotlight">Spotlight</a> theme
+        </footer>
+    </main>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

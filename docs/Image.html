@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A*</title>
+
+    <link type="text/css" rel="stylesheet" href="css/atom-one-dark.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body>
+
+    <aside>
+        <header><h1>A*</h1></header><ul><li><a href="index.html">Home page</a></li></ul><ul><li class="category">Elements</li><li id="menu-Block"><a href="Block.html">Block</a></li><li id="menu-Entry"><a href="Entry.html">Entry</a></li><li id="menu-Utf8"><a href="Utf8.html">Utf8</a></li><li class="category">Images</li><li id="menu-PictureImage"><a href="PictureImage.html">PictureImage</a></li><li class="category">Interfaces</li><li id="menu-Interface"><a href="Interface.html">Interface</a></li><li class="category">Images</li><li id="menu-Image"><a href="Image.html">Image</a></li><li class="category">Interfaces</li><li id="menu-GUI"><a href="GUI.html">GUI</a></li></ul>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Image</h1>
+        </header>
+        <section>
+            
+
+
+
+        
+        <div class="main-description">
+            
+        </div>
+
+        
+        
+         
+
+<div class="members" id="member-Image">
+    <header class="class">
+        
+        <h2 class="public">
+            Image
+             <span class="signature"><span class="signature">(context, data)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 663)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Image data structure.It allows to easily manipulate bytes on a image to store data on it.This is intended to work together with a basic interface as a file system.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            context
+            
+        </td>
+    
+        <td>
+
+CanvasRenderingContext2D
+</td>
+    
+        <td>
+            Canvas context
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            data
+            
+                <br />
+                <span class="default-value">Default : null</span>
+            
+        </td>
+    
+        <td>
+
+Object
+</td>
+    
+        <td>
+            Format data (leave blank if you're loading an existing image)
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+
+<div class="members" id="member-HEADER">
+    <header class="member">
+        
+        <h2 class="public">
+            HEADER<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1078)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Image header size.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-SIGNATURE">
+    <header class="member">
+        
+        <h2 class="public">
+            SIGNATURE<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1048)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>List of signatures.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-block">
+    <header class="function">
+        
+        <h2 class="public">
+            block
+             <span class="signature"><span class="signature">(n, data)</span><span class="type-signature"> &rarr; {<a href="Entry.html">Entry</a>}</span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 901)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Read (and write if second argument is given) into a specific block.You should always use this method to edit blocks in image.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            n
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            Block index
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            data
+            
+        </td>
+    
+        <td>
+
+Object
+</td>
+    
+        <td>
+            Data to write
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+                <li>
+                    <h3>Returns</h3>
+                    <table class="returns">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+<a href="Entry.html">Entry</a>
+</td>
+    
+        <td>Block</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3 class="exceptions">Exceptions thrown</h3>
+                    <table class="exceptions">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Error
+</td>
+    
+        <td>Block out of bounds</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-block_number">
+    <header class="member">
+        
+        <h2 class="public">
+            block_number<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 832)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Number of block available.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-block_size">
+    <header class="member">
+        
+        <h2 class="public">
+            block_size<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 822)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Block size.Min block size : (Block reserved area) + (1 byte content) = 3*8 + 1*8 = 32 bits = 4 bytesMax block size : 2 ** 16 = 6553516 bits.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-block_unused">
+    <header class="member">
+        
+        <h2 class="public">
+            block_unused<span class="signature"><span class="type-signature"> : <a href="Block.html">Block</a></span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 843)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Returns first unused block.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-crypted">
+    <header class="member">
+        
+        <h2 class="public">
+            crypted<span class="signature"><span class="type-signature"> : Boolean</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 749)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Encryption status.If enabled, this means that image data is encrypted.This value can only be edited upon image formatting.1 bit.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-data">
+    <header class="member">
+        
+        <h2 class="protected">
+            data<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 925)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="protected">protected</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Canvas image data.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-entry">
+    <header class="function">
+        
+        <h2 class="public">
+            entry
+             <span class="signature"><span class="signature">(n, data)</span><span class="type-signature"> &rarr; {<a href="Entry.html">Entry</a>}</span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 875)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Read (and write if second argument is given) into a specific table entry.You should always use this method to edit entries in image.</pre><div class="alert danger">Entry are indexed started from 1 (0 is reserved for root directory) !</div></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            n
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            Entry index
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            data
+            
+        </td>
+    
+        <td>
+
+Object
+</td>
+    
+        <td>
+            Data to write
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+                <li>
+                    <h3>Returns</h3>
+                    <table class="returns">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+<a href="Entry.html">Entry</a>
+</td>
+    
+        <td>Table entry</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3 class="exceptions">Exceptions thrown</h3>
+                    <table class="exceptions">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Error
+</td>
+    
+        <td>Entry out of bounds</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-entry_name">
+    <header class="member">
+        
+        <h2 class="public">
+            entry_name<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 733)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Entry name max length.This value can only be edited upon image formatting.11 | 32 bytes10 | 24 bytes01 | 16 bytes00 | 8 bytes2 bits.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-entry_unused">
+    <header class="member">
+        
+        <h2 class="public">
+            entry_unused<span class="signature"><span class="type-signature"> : <a href="Entry.html">Entry</a></span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 886)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Returns first unused entry.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-format">
+    <header class="function">
+        
+        <h2 class="private">
+            format
+             <span class="signature"><span class="signature">(data)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 681)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="private">private</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Format image.This should only be called once and only by constructor.If called while null is given, no formatting will be done.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            data
+            
+        </td>
+    
+        <td>
+
+Object
+</td>
+    
+        <td>
+            Format data
+            
+        </td>
+    
+        <td>
+            
+            <label class='nullable'>Nullable</label>
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-free">
+    <header class="member">
+        
+        <h2 class="public">
+            free<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 853)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Returns free space depending on available blocks.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-fset">
+    <header class="function">
+        
+        <h2 class="public">
+            fset
+             <span class="signature"><span class="signature">(byte)</span><span class="type-signature"> &rarr; (nullable) {Number}</span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1013)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label>
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Returns index of first set bit.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            byte
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            Byte to test
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+                <li>
+                    <h3>Returns</h3>
+                    <table class="returns">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>First set bit index (starting from LSB)</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-height">
+    <header class="member">
+        
+        <h2 class="protected">
+            height<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 918)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="protected">protected</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Canvas height.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-index">
+    <header class="function">
+        
+        <h2 class="public">
+            index
+             <span class="signature"><span class="signature">(n)</span><span class="type-signature"> &rarr; {Number}</span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 933)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Returns writing index in ImageData instance (avoid alpha channel).</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            n
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            Byte index
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+                <li>
+                    <h3>Returns</h3>
+                    <table class="returns">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>ImageData index</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3 class="exceptions">Exceptions thrown</h3>
+                    <table class="exceptions">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Error
+</td>
+    
+        <td>Index out of bounds</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-isImage">
+    <header class="function">
+        
+        <h2 class="public">
+            isImage
+             <span class="signature"><span class="signature">(data)</span><span class="type-signature"> &rarr; {Boolean}</span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1023)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label>
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Check if image is an Image.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            data
+            
+        </td>
+    
+        <td>
+
+Uint8ClampedArray
+</td>
+    
+        <td>
+            Image data
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+                <li>
+                    <h3>Returns</h3>
+                    <table class="returns">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Boolean
+</td>
+    
+        <td>True if signature match</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-isPictureImage">
+    <header class="function">
+        
+        <h2 class="public">
+            isPictureImage
+             <span class="signature"><span class="signature">(data)</span><span class="type-signature"> &rarr; {Boolean}</span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1388)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label>
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Check if image is a PictureImage.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            data
+            
+        </td>
+    
+        <td>
+
+Uint8ClampedArray
+</td>
+    
+        <td>
+            Image data
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+                <li>
+                    <h3>Returns</h3>
+                    <table class="returns">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Boolean
+</td>
+    
+        <td>True if signature match</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-open">
+    <header class="function">
+        
+        <h2 class="public">
+            open
+             <span class="signature"><span class="signature">(context)</span><span class="type-signature"> &rarr; {<a href="Image.html">Image</a>}</span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1033)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label>
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Open an image file according to its signature.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            context
+            
+        </td>
+    
+        <td>
+
+CanvasRenderingContext2D
+</td>
+    
+        <td>
+            Context where image data is available
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+                <li>
+                    <h3>Returns</h3>
+                    <table class="returns">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+<a href="Image.html">Image</a>
+</td>
+    
+        <td>Instance of Image or its children</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-read">
+    <header class="function">
+        
+        <h2 class="public">
+            read
+             <span class="signature"><span class="signature">(n, masks)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 991)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Read bytes on ImageData.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            n
+            
+        </td>
+    
+        <td>
+
+Number<br />Array.&lt;Number>
+</td>
+    
+        <td>
+            Start index. May be specified as an array <span class="bold">[start, end (included)]</span>.
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            masks
+            
+                <br />
+                <span class="default-value">Default : 0xFF</span>
+            
+        </td>
+    
+        <td>
+
+Number<br />Array.&lt;Number>
+</td>
+    
+        <td>
+            Binary mask(s)
+            
+        </td>
+    
+        <td>
+            
+            <label class='nullable'>Nullable</label>
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3 class="exceptions">Exceptions thrown</h3>
+                    <table class="exceptions">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Error
+</td>
+    
+        <td>Index out of bounds</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-signature">
+    <header class="member">
+        
+        <h2 class="public">
+            signature<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 718)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Signature.This value can only be edited upon image formatting.4 bits.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-size">
+    <header class="member">
+        
+        <h2 class="public">
+            size<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 774)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Size.Max size : 2**24 = 16777216 oct = 16.78 MoMin size : (Image header size) + (1 Table entry) + (1 Cluster min size) = 8*8 + 15*8+32 + 2*8 = 57 bytes, round to 6424 bits.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-sync">
+    <header class="function">
+        
+        <h2 class="public">
+            sync
+             <span class="signature"><span class="signature">(direction, force)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 949)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Synchronize data between Canvas image and ImageData.If configured in output (direction = 0), ImageData will erase Canvas image.If configured in input (direction = 1), Canvas image will erase ImageData.If a boolean is given, it enables or disabled automatic synchronization during write and read operations.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            direction
+            
+                <br />
+                <span class="default-value">Default : 0</span>
+            
+        </td>
+    
+        <td>
+
+Number<br />Boolean
+</td>
+    
+        <td>
+            Direction or status
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            force
+            
+                <br />
+                <span class="default-value">Default : false</span>
+            
+        </td>
+    
+        <td>
+
+Boolean
+</td>
+    
+        <td>
+            Force synchronization
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-table_entry">
+    <header class="member">
+        
+        <h2 class="public">
+            table_entry<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 810)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Size (in bytes) of a table entry (include its name size).</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-table_extended">
+    <header class="member">
+        
+        <h2 class="public">
+            table_extended<span class="signature"><span class="type-signature"> : Boolean</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 761)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Table entries extended data option.If enabled, creation date, edition date and permissions will be added to each table entry.1 bit.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-table_size">
+    <header class="member">
+        
+        <h2 class="public">
+            table_size<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 797)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Table size. As max entries is 65534 (see <a href="Entry.html">Entry</a>), 2 bytes are required.16 bits.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-width">
+    <header class="member">
+        
+        <h2 class="protected">
+            width<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 911)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="protected">protected</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Canvas width.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-write">
+    <header class="function">
+        
+        <h2 class="public">
+            write
+             <span class="signature"><span class="signature">(n, bytes, masks)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 969)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Write bytes in ImageData.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            n
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            Start index
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            bytes
+            
+        </td>
+    
+        <td>
+
+Number<br />Array.&lt;Number>
+</td>
+    
+        <td>
+            Byte(s) to write
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            masks
+            
+                <br />
+                <span class="default-value">Default : 0xFF</span>
+            
+        </td>
+    
+        <td>
+
+Number<br />Array.&lt;Number>
+</td>
+    
+        <td>
+            Binary mask(s)
+            
+        </td>
+    
+        <td>
+            
+            <label class='nullable'>Nullable</label>
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3 class="exceptions">Exceptions thrown</h3>
+                    <table class="exceptions">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Error
+</td>
+    
+        <td>Index out of bounds</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+
+
+
+        
+        
+        
+
+        
+        
+        
+
+
+        </section>
+        <footer>
+            Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Aug 04 2017 15:14:46 GMT+0200 (Paris, Madrid (heure d’été))
+            <br />
+            Embellished by <a href="https://github.com/lowlighter/jsdoc-spotlight">Spotlight</a> theme
+        </footer>
+    </main>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

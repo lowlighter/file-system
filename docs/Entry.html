@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A*</title>
+
+    <link type="text/css" rel="stylesheet" href="css/atom-one-dark.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body>
+
+    <aside>
+        <header><h1>A*</h1></header><ul><li><a href="index.html">Home page</a></li></ul><ul><li class="category">Elements</li><li id="menu-Block"><a href="Block.html">Block</a></li><li id="menu-Entry"><a href="Entry.html">Entry</a></li><li id="menu-Utf8"><a href="Utf8.html">Utf8</a></li><li class="category">Images</li><li id="menu-PictureImage"><a href="PictureImage.html">PictureImage</a></li><li class="category">Interfaces</li><li id="menu-Interface"><a href="Interface.html">Interface</a></li><li class="category">Images</li><li id="menu-Image"><a href="Image.html">Image</a></li><li class="category">Interfaces</li><li id="menu-GUI"><a href="GUI.html">GUI</a></li></ul>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Entry</h1>
+        </header>
+        <section>
+            
+
+
+
+        
+        <div class="main-description">
+            
+        </div>
+
+        
+        
+         
+
+<div class="members" id="member-Entry">
+    <header class="class">
+        
+        <h2 class="public">
+            Entry
+             <span class="signature"><span class="signature">(image, id, n, data)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 130)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Entry manager.Default size for table entries is 44 bits (6 bytes, with 4 unused bits)If extended table entries data is enabled, Entry if 120 bits (15 bytes).Add 8, 16, 24 or 32 bytes for file name.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            image
+            
+        </td>
+    
+        <td>
+
+<a href="Image.html">Image</a>
+</td>
+    
+        <td>
+            Associated Image instance
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            id
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            Id
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            n
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            File index
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            data
+            
+        </td>
+    
+        <td>
+
+Object
+</td>
+    
+        <td>
+            Data to write
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+
+<div class="members" id="member-BLANK">
+    <header class="member">
+        
+        <h2 class="public">
+            BLANK<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 506)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Blank id. An entry with this id as parent will be considered as blank and unused.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-DATE_OFFSET">
+    <header class="member">
+        
+        <h2 class="public">
+            DATE_OFFSET<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 566)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Date offset.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-EXTENDED">
+    <header class="member">
+        
+        <h2 class="public">
+            EXTENDED<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 577)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Entry header size (when table is extended).</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-FILE">
+    <header class="member">
+        
+        <h2 class="public">
+            FILE<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 516)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>File entry type value.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-FOLDER">
+    <header class="member">
+        
+        <h2 class="public">
+            FOLDER<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 526)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Folder entry type value.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-HIDDEN">
+    <header class="member">
+        
+        <h2 class="public">
+            HIDDEN<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 546)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Hidden visibility status value.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-NAME">
+    <header class="member">
+        
+        <h2 class="public">
+            NAME<span class="signature"><span class="type-signature"> : Array.&lt;Number></span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 597)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Available entry name length (specify 4 values at most).</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-NONE">
+    <header class="member">
+        
+        <h2 class="public">
+            NONE<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 556)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Block null value. An entry or a block with this value in their first block (or next block) will be considered as having none.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-REDUCED">
+    <header class="member">
+        
+        <h2 class="public">
+            REDUCED<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 587)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Entry header size (when table is not extended).</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-ROOT">
+    <header class="member">
+        
+        <h2 class="public">
+            ROOT<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 496)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Root id. An entry with this id as parent will be considered as child of root directory.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-VISIBLE">
+    <header class="member">
+        
+        <h2 class="public">
+            VISIBLE<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 536)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label> <label class="constant">Constant</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Visible status value.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-blank">
+    <header class="member">
+        
+        <h2 class="public">
+            blank<span class="signature"><span class="type-signature"> : Boolean</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 461)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Tell if entry is blank.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-block">
+    <header class="member">
+        
+        <h2 class="public">
+            block<span class="signature"><span class="type-signature"> : Number|<a href="Block.html">Block</a></span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 227)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>First block id.Max blocks : 2**20-1 = 104857420 bits.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-blocks">
+    <header class="member">
+        
+        <h2 class="public">
+            blocks<span class="signature"><span class="type-signature"> : Array.&lt;<a href="Block.html">Block</a>></span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 239)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>List of used blocks.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-content">
+    <header class="member">
+        
+        <h2 class="public">
+            content<span class="signature"><span class="type-signature"> : String</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 382)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="nullable">Nullable</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Entry content (revelent only for files).</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-creation">
+    <header class="member">
+        
+        <h2 class="public">
+            creation<span class="signature"><span class="type-signature"> : Object</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 264)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Entry creation date.8 bits | Year (2255 > x, min 2000)4 bits | Month (16 > 12)5 bits | Day (32 > 31)5 bits | Hour (32 > 24)6 bits | Minute (64 > 60)6 bits | Second (64 > 60)34 bits.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-data">
+    <header class="member">
+        
+        <h2 class="public">
+            data<span class="signature"><span class="type-signature"> : Object</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 166)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Shortcut to set properties with an object structure.If table extended entries data option isn't set, property will silently fail.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-edition">
+    <header class="member">
+        
+        <h2 class="public">
+            edition<span class="signature"><span class="type-signature"> : Object</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 299)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Entry edition date.8 bits | Year (2255 > x, min 2000)4 bits | Month (16 > 12)5 bits | Day (32 > 31)5 bits | Hour (32 > 24)6 bits | Minute (64 > 60)6 bits | Second (64 > 60)34 bits.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-erase">
+    <header class="function">
+        
+        <h2 class="public">
+            erase
+             <span class="signature"><span class="signature">()</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 426)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Erase all content by freeing all used blocks and clearing content.No effect on folders.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-file">
+    <header class="member">
+        
+        <h2 class="public">
+            file<span class="signature"><span class="type-signature"> : Boolean</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 437)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Tell if entry is a file.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-folder">
+    <header class="member">
+        
+        <h2 class="public">
+            folder<span class="signature"><span class="type-signature"> : Boolean</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 443)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Tell if entry is a folder.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-hidden">
+    <header class="member">
+        
+        <h2 class="public">
+            hidden<span class="signature"><span class="type-signature"> : Boolean</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 455)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Tell if entry is hidden.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-id">
+    <header class="member">
+        
+        <h2 class="public">
+            id<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 144)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Id</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-image">
+    <header class="member">
+        
+        <h2 class="private">
+            image<span class="signature"><span class="type-signature"> : <a href="Image.html">Image</a></span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 137)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+             <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="private">private</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Associated Image instance.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-n">
+    <header class="member">
+        
+        <h2 class="private">
+            n<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 152)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+             <label class="readonly">Readonly</label></label></label>
+            
+            
+            <label class="private">private</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Index of first byte in image.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-name">
+    <header class="member">
+        
+        <h2 class="public">
+            name<span class="signature"><span class="type-signature"> : String</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 363)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>File name.Between 64 and 256 bits (8 and 32 bytes)</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-owner">
+    <header class="member">
+        
+        <h2 class="public">
+            owner<span class="signature"><span class="type-signature"> : Number</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 202)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Unique owner id.Max users : 2**6 - 1 = 636 bits.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-parent">
+    <header class="member">
+        
+        <h2 class="public">
+            parent<span class="signature"><span class="type-signature"> : Number|File</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 213)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Unique parent folder id.Max entries : 2**16 - 2 = 6553416 bits.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-path">
+    <header class="member">
+        
+        <h2 class="public">
+            path<span class="signature"><span class="type-signature"> : String</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 478)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Entry's path.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-permissions">
+    <header class="member">
+        
+        <h2 class="public">
+            permissions<span class="signature"><span class="type-signature"> : Object</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 329)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Permissions file (Read/Write/eXecute/Delete).Note that only two sets are defined : User (owner) and Others.8 bits.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-type">
+    <header class="member">
+        
+        <h2 class="public">
+            type<span class="signature"><span class="type-signature"> : Boolean</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 181)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Entry type (file or folder).1 bit.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-visibility">
+    <header class="member">
+        
+        <h2 class="public">
+            visibility<span class="signature"><span class="type-signature"> : Boolean</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 191)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p><pre>Entry visibility.1 bit.</pre></p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-visible">
+    <header class="member">
+        
+        <h2 class="public">
+            visible<span class="signature"><span class="type-signature"> : Boolean</span></span>
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 449)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            <label class="public">Public</label>
+        </div>
+    </header>
+
+    
+    
+    
+        <p>Tell if entry is visible.</p>
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+
+
+
+        
+        
+        
+
+        
+        
+        
+
+
+        </section>
+        <footer>
+            Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Aug 04 2017 15:14:46 GMT+0200 (Paris, Madrid (heure d’été))
+            <br />
+            Embellished by <a href="https://github.com/lowlighter/jsdoc-spotlight">Spotlight</a> theme
+        </footer>
+    </main>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

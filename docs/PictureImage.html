@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A*</title>
+
+    <link type="text/css" rel="stylesheet" href="css/atom-one-dark.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body>
+
+    <aside>
+        <header><h1>A*</h1></header><ul><li><a href="index.html">Home page</a></li></ul><ul><li class="category">Elements</li><li id="menu-Block"><a href="Block.html">Block</a></li><li id="menu-Entry"><a href="Entry.html">Entry</a></li><li id="menu-Utf8"><a href="Utf8.html">Utf8</a></li><li class="category">Images</li><li id="menu-PictureImage"><a href="PictureImage.html">PictureImage</a></li><li class="category">Interfaces</li><li id="menu-Interface"><a href="Interface.html">Interface</a></li><li class="category">Images</li><li id="menu-Image"><a href="Image.html">Image</a></li><li class="category">Interfaces</li><li id="menu-GUI"><a href="GUI.html">GUI</a></li></ul>
+    </aside>
+
+    <main>
+        <header>
+            <h1>PictureImage</h1>
+        </header>
+        <section>
+            
+
+
+
+        
+        <div class="main-description">
+            
+        </div>
+
+        
+        
+         
+
+<div class="members" id="member-PictureImage">
+    <header class="class">
+        
+        <h2 class="public">
+            PictureImage
+             <span class="signature"><span class="signature">(context, data)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1238)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Image data structure.It allows to easily manipulate bytes on a image to store data on it.This is intended to work together with a basic interface as a file system.Unlike <a href="Image.html">Image</a>, this one can be used on top of an existing picture to achieve steganography.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            context
+            
+        </td>
+    
+        <td>
+
+CanvasRenderingContext2D
+</td>
+    
+        <td>
+            Canvas context
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            data
+            
+                <br />
+                <span class="default-value">Default : null</span>
+            
+        </td>
+    
+        <td>
+
+Object
+</td>
+    
+        <td>
+            Format data (leave blank if you're loading an existing image)
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+
+<div class="members" id="member-format">
+    <header class="function">
+        
+        <h2 class="private">
+            format
+             <span class="signature"><span class="signature">(data)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1253)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="private">private</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Format image.This should only be called once and only by constructor.If called while null is given, no formatting will be done.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            data
+            
+        </td>
+    
+        <td>
+
+Object
+</td>
+    
+        <td>
+            Format data
+            
+        </td>
+    
+        <td>
+            
+            <label class='nullable'>Nullable</label>
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-fromImage">
+    <header class="function">
+        
+        <h2 class="public">
+            fromImage
+             <span class="signature"><span class="signature">(image)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1362)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            <label class="static">Static</label></label></label>
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Create a PictureImage from an Image. May be truncated if Image is bigger.</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            image
+            
+        </td>
+    
+        <td>
+
+<a href="Image.html">Image</a>
+</td>
+    
+        <td>
+            Original image
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-index">
+    <header class="function">
+        
+        <h2 class="public">
+            index
+             <span class="signature"><span class="signature">(n, bits)</span><span class="type-signature"> &rarr; {Number|Set}</span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1272)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p>Returns writing index in ImageData instance (avoid alpha channel).</p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            n
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            Byte index
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            bits
+            
+                <br />
+                <span class="default-value">Default : false</span>
+            
+        </td>
+    
+        <td>
+
+Boolean
+</td>
+    
+        <td>
+            Byte's bits indexes
+            
+        </td>
+    
+        <td>
+            
+            
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+                <li>
+                    <h3>Returns</h3>
+                    <table class="returns">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Number<br />Set
+</td>
+    
+        <td>ImageData index(es)</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3 class="exceptions">Exceptions thrown</h3>
+                    <table class="exceptions">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Error
+</td>
+    
+        <td>Index out of bounds</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-read">
+    <header class="function">
+        
+        <h2 class="public">
+            read
+             <span class="signature"><span class="signature">(n, masks)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1328)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Read bytes on ImageData.This method has been adpated to write only of two LSB from each byte.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            n
+            
+        </td>
+    
+        <td>
+
+Number<br />Array.&lt;Number>
+</td>
+    
+        <td>
+            Start index. May be specified as an array <span class="bold">[start, end (included)]</span>.
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            masks
+            
+                <br />
+                <span class="default-value">Default : 0xFF</span>
+            
+        </td>
+    
+        <td>
+
+Number<br />Array.&lt;Number>
+</td>
+    
+        <td>
+            Binary mask(s)
+            
+        </td>
+    
+        <td>
+            
+            <label class='nullable'>Nullable</label>
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3 class="exceptions">Exceptions thrown</h3>
+                    <table class="exceptions">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Error
+</td>
+    
+        <td>Index out of bounds</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+ 
+
+<div class="members" id="member-write">
+    <header class="function">
+        
+        <h2 class="public">
+            write
+             <span class="signature"><span class="signature">(n, bytes, masks)</span><span class="type-signature"></span></span> 
+        </h2>
+
+        
+        
+            <div class="sources">
+                 <a href="lowlight.fs.js.html">lowlight.fs.js (line 1296)</a>
+            </div>
+        
+
+        
+        <div class="properties">
+            
+            
+            
+            
+            <label class="public">public</label>
+        </div>
+    </header>
+
+    
+    
+
+    
+    
+        <p><pre>Write bytes in ImageData.This method has been adpated to write only of two LSB from each byte.</pre></p>
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3>Arguments</h3>
+                    
+
+
+
+<table class="params">
+    
+
+<tr>
+    
+        <td>
+            n
+            
+        </td>
+    
+        <td>
+
+Number
+</td>
+    
+        <td>
+            Start index
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            bytes
+            
+        </td>
+    
+        <td>
+
+Number<br />Array.&lt;Number>
+</td>
+    
+        <td>
+            Byte(s) to write
+            
+        </td>
+    
+        <td>
+            
+            
+            
+        </td>
+</tr>
+
+
+<tr>
+    
+        <td>
+            masks
+            
+                <br />
+                <span class="default-value">Default : 0xFF</span>
+            
+        </td>
+    
+        <td>
+
+Number<br />Array.&lt;Number>
+</td>
+    
+        <td>
+            Binary mask(s)
+            
+        </td>
+    
+        <td>
+            
+            <label class='nullable'>Nullable</label>
+            <label class='optional'>Optional</label>
+        </td>
+</tr>
+
+</table>
+
+                </li>
+            
+
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+    <div class="card definition">
+        <ul>
+            
+            
+                <li>
+                    <h3 class="exceptions">Exceptions thrown</h3>
+                    <table class="exceptions">
+                         
+
+<tr>
+    
+        <td></td>
+    
+        <td>
+
+Error
+</td>
+    
+        <td>Index out of bounds</td>
+    
+        <td></td>
+</tr>
+ 
+                    </table>
+                </li>
+            
+            
+            
+        </ul>
+    </div>
+    <br />
+    
+
+    
+    
+
+    
+        
+
+
+
+</div>
+
+
+
+        
+        
+        
+
+        
+        
+        
+
+
+        </section>
+        <footer>
+            Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Aug 04 2017 15:14:46 GMT+0200 (Paris, Madrid (heure d’été))
+            <br />
+            Embellished by <a href="https://github.com/lowlighter/jsdoc-spotlight">Spotlight</a> theme
+        </footer>
+    </main>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
