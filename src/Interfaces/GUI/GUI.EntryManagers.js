@@ -72,16 +72,30 @@
                         if (/^\.\//.test(path)) { path = path.replace(/^\.\//, pwd) } else { path = "/"+path }
                         try { this.path(path, entry.type, pwd) }
                     //Move entry into new path
-                        catch (e) {
-                            let name = path.match(/\/([a-zA-Z.0-9]+)$/)[1]
-                            try {
-                                let parent = this.path(path.replace(new RegExp(name+"$"), "") )
-                                entry.name = name ; entry.parent = parent
-                                content.parent().remove() ; figure.remove()
-                                if (this.path(pwd) === parent) { this.gui_icon(entry, context) }
-                            } catch (e) { }
-                        }
+                        catch (ee) { this._gui_move(path, entry, figure, content, context) }
                         content.find(".app-move-to-msg").text(GUI.TEXT.INVALID_PATH)
                 } catch (e) { this.gui_error(e) }
             })
+    }
+
+/**
+ * Move entry to another folder.
+ * <div class="alert warning">
+ * Originally, it was inside [gui_move]{@link GUI#gui_move} method but Babili seems to have problems with multiple nested try-catch statements (resulting in "identifier has already been declared")
+ * </div>
+ * @param {String} path - Path
+ * @param {Entry} entry - Entry to move
+ * @param {DOMElement} figure - Icon associated to current entry
+ * @param {DOMElement} content - Context content div
+ * @param {DOMElement} context - Current context (allows to know pwd and to refresh icon)
+ * @private
+ */
+    _gui_move(path, entry, figure, content, context) {
+        let name = path.match(/\/([a-zA-Z.0-9]+)$/)[1]
+        try {
+            let parent = this.path(path.replace(new RegExp(name+"$"), "") )
+            entry.name = name ; entry.parent = parent
+            content.parent().remove() ; figure.remove()
+            if (this.path(pwd) === parent) { this.gui_icon(entry, context) }
+        } catch (ee) { }
     }
