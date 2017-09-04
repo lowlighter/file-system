@@ -16,7 +16,7 @@
 
 
 /**
- * Texts
+ * Texts.
  * @type {Object}
  * @memberof GUI
  */
@@ -107,14 +107,14 @@
  * @memberof GUI
  */
     GUI.ICONS = {
-        _DIR:"/src/file-system/gui/",
-        SAVE:"/src/file-system/gui/save.png",
-        IMG:"/src/file-system/gui/file-img.png",
-        AUDIO:"/src/file-system/gui/file-audio.png",
-        TEXT:"/src/file-system/gui/file-text.png",
-        CONF:"/src/file-system/gui/file-conf.png",
-        CMD:"/src/file-system/gui/file-cmd.png",
-        ERROR:"/src/file-system/gui/error.png",
-        FOLDER_EMPTY:"/src/file-system/gui/folder-empty.png",
-        FOLDER_FILES:"/src/file-system/gui/folder-files.png"
+        _DIR:"gui/",
+        SAVE:"gui/save.png",
+        IMG:"gui/file-img.png",
+        AUDIO:"gui/file-audio.png",
+        TEXT:"gui/file-text.png",
+        CONF:"gui/file-conf.png",
+        CMD:"gui/file-cmd.png",
+        ERROR:"gui/error.png",
+        FOLDER_EMPTY:"gui/folder-empty.png",
+        FOLDER_FILES:"gui/folder-files.png"
     }
