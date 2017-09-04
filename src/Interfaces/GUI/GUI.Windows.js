@@ -6,7 +6,7 @@
  */
     gui_window(title = "", content = false) {
         //Windows structure
-            let offset = {top:parseInt($(".app-terminal .app-windows:last-of-type").css("top"))||GUI.OFFSET.TOP.MIN, left:parseInt($(".app-terminal .app-windows:last-of-type").css("left"))||GUI.OFFSET.LEFT.MIN}
+            let offset = {top:parseInt($(".app-controller .app-windows:last-of-type").css("top"))||GUI.OFFSET.TOP.MIN, left:parseInt($(".app-controller .app-windows:last-of-type").css("left"))||GUI.OFFSET.LEFT.MIN}
             let context = $(`
                 <div class="app-windows">
                     <div class="app-windows-bar">
@@ -34,7 +34,7 @@
  * Init GUI windows dragging.
  */
     _gui_window_dragging() {
-        $(".app-terminal").mouseup(() => GUI.DRAGGING = false)
+        $(".app-controller").mouseup(() => GUI.DRAGGING = false)
             .mousemove(ev => this._gui_window_dragged(ev))
     }
 
@@ -56,7 +56,7 @@
  * @param {Error} e - Error
  */
     gui_error(e) {
-        this.gui_window(e.name).addClass("app-windows-error").find(".app-windows-content").append(`<table><tr><td><img src="/src/file-system/gui/error.png" /></td><td>${e.message}</td></tr></table>`)
+        this.gui_window(e.name).addClass("app-windows-error").find(".app-windows-content").append(`<table><tr><td><img src="${GUI.ICONS.ERROR}" /></td><td>${e.message}</td></tr></table>`)
     }
 
 /**

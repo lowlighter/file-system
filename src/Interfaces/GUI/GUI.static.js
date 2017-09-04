@@ -6,8 +6,8 @@
     GUI.OFFSET.LEFT = {VAL:10, MIN:60}
 
 //Dimensions
-    GUI.WIDTH = $(".app-terminal").width()
-    GUI.HEIGHT = $(".app-terminal").height()
+    Object.defineProperty(GUI, "WIDTH", {get() { return $(".app-controller").width() } })
+    Object.defineProperty(GUI, "HEIGHT", {get() { return $(".app-controller").height() } })
     GUI.WINDOW_WIDTH  = 300
     GUI.WINDOW_HEIGHT  = 250
 
@@ -15,7 +15,11 @@
     GUI.COMMANDS = ["pwd", "env", "whoami", "users", "dstat", "dload", "encrypt", "decrypt", "adduser", "deluser", "su", "explorer", "terminal", "edit", "play", "display", "exec", "cd", "mkdir", "mkfile", "dformat", "help", "rm", "chown", "stat", "chmod", "mv", "ls", "tree"]
 
 
-//Text
+/**
+ * Texts
+ * @type {Object}
+ * @memberof GUI
+ */
     GUI.TEXT = {
         MK_NEW_FILE:$(".text-mk-new-file").text(),
         MK_NEW_FOLDER:$(".text-mk-new-folder").text(),
@@ -95,4 +99,22 @@
         SCRIPT:$(".text-script-msg").text(),
         SHOW_HIDDEN:$(".text-show-hidden").text(),
         CLIPPY:$(".text-clippy-msg").text()
+    }
+
+/**
+ * Paths to icons.
+ * @type {Object}
+ * @memberof GUI
+ */
+    GUI.ICONS = {
+        _DIR:"/src/file-system/gui/",
+        SAVE:"/src/file-system/gui/save.png",
+        IMG:"/src/file-system/gui/file-img.png",
+        AUDIO:"/src/file-system/gui/file-audio.png",
+        TEXT:"/src/file-system/gui/file-text.png",
+        CONF:"/src/file-system/gui/file-conf.png",
+        CMD:"/src/file-system/gui/file-cmd.png",
+        ERROR:"/src/file-system/gui/error.png",
+        FOLDER_EMPTY:"/src/file-system/gui/folder-empty.png",
+        FOLDER_FILES:"/src/file-system/gui/folder-files.png"
     }

@@ -14,7 +14,7 @@
                     case "whoami": li.text(`${this.env.USER} (user n° ${this.user})`); break
                 //Application
                     case "explorer": this.gui_list(args[1]||this.pwd); break
-                    case "terminal": $(".app-terminal [data-app-icon=cmd]").click(); break
+                    case "terminal": $(".app-controller [data-app-icon=cmd]").click(); break
                     case "edit": this.gui_edit(args[1], this.image.entry(this.path(args[1], Entry.FILE, this.pwd)).content); break
                     case "play": this.gui_play(args[1], this.image.entry(this.path(args[1], Entry.FILE, this.pwd)).content); break
                     case "display": this.gui_display(args[1], this.image.entry(this.path(args[1], Entry.FILE, this.pwd)).content); break
@@ -97,8 +97,8 @@
                         $("li:last-child div").text(args[2].length ? line.replace(new RegExp(args[2]+"\s*$"), "****") : `${line} ****`); break
                     case "users": li.text(this.users_list.join("\n")); break;
                 //Disk format
-                    case "dstat": $(".app-terminal [data-app-icon=dstat]").click(); break
-                    case "dload": $(".app-terminal [data-app-icon=dload]").click(); break
+                    case "dstat": $(".app-controller [data-app-icon=dstat]").click(); break
+                    case "dload": $(".app-controller [data-app-icon=dload]").click(); break
                 //Disk formatting
                     case "dformat":
                         //Size
@@ -109,15 +109,14 @@
                             ctx.fillStyle = 0 ; ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
                             this.context.empty()
                         //New GUI
-                            new GUI( new Image(this.image.context, {
+                            if (new GUI( new Image(this.image.context, {
                                 crypted:0,
                                 table:parseInt((line.match(/-table-size=(\d+)/)||[,512])[1]),
                                 block:parseInt((line.match(/-block-size=(\d+)/)||[,256])[1]),
                                 name:parseInt((line.match(/-entry-name-length=(\d+)/)||[,32])[1]),
                                 extended:(line.match(/-table-extended=(y|n)/)||[,"y"])[1] === "y" ? 1 : 0,
-                            }), this.context)
-                        return
-                    case "help": li.text($(`[data-app-help=${args[1]||"help"}]`).text().trim())
+                            }), this.context)) { return }
+                    case "help": li.text($(`[data-app-help=${args[1]||"help"}]`).text().trim()); break; 
                 default:
                     throw new Error(`Unknown command ${args[0]}`)
             }

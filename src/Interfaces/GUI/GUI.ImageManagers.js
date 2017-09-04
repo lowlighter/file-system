@@ -43,7 +43,7 @@
                     let image = callback()
                 //Reset interface
                     this.context.empty()
-                    new GUI(image, $(".app-terminal").get(0))
+                    new GUI(image, $(".app-controller").get(0))
             }
         //Retrieve uploaded file
             let file = $(ev.target).get(0).files[0]

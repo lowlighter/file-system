@@ -26,7 +26,7 @@
                     return false
             }   }   })
         //Save event
-            let save = $(`<div class="app-windows-save"><img src="/src/file-system/gui/save.png"></div>`).appendTo(context.find(".app-windows-bar"))
+            let save = $(`<div class="app-windows-save"><img src="${GUI.ICONS.SAVE}"></div>`).appendTo(context.find(".app-windows-bar"))
             save.click(() => { try {
                 let txt = $("<div></div>").html(context.find(".app-windows-content").html().replace(/<br\s*[\/]?>/gi, "\n")).text()
                 let entry = this.image.entry(this.path(path, Entry.FILE))

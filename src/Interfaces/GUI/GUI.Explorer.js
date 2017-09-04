@@ -15,28 +15,28 @@
         //File extension app link
             if (entry.file) {
                 if (/\.(?:jpeg|jpg|gif|png|apng|svg|bmp|ico)$/.test(entry.name)) {
-                    figure.find("img").attr("src", "/src/file-system/gui/file-img.png")
+                    figure.find("img").attr("src", GUI.ICONS.IMG)
                     figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry).gui_display(entry.path, entry.content) } catch (e) { this.gui_error(e) } })
                 } else
                 if (/\.(?:mp3|mpeg|ogg|wav)$/.test(entry.name)) {
-                    figure.find("img").attr("src", "/src/file-system/gui/file-audio.png")
+                    figure.find("img").attr("src", GUI.ICONS.AUDIO)
                     figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry).gui_play(entry.path, entry.content) } catch (e) { this.gui_error(e) } })
                 } else
                 if (/\.txt$/.test(entry.name)) {
-                    figure.find("img").attr("src", "/src/file-system/gui/file-text.png")
+                    figure.find("img").attr("src", GUI.ICONS.TEXT)
                     figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry).gui_edit(entry.path, entry.content) } catch (e) { this.gui_error(e) } })
                 } else
                 if (/\.conf$/.test(entry.name)) {
-                    figure.find("img").attr("src", "/src/file-system/gui/file-conf.png")
+                    figure.find("img").attr("src", GUI.ICONS.CONF)
                     figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry).gui_edit(entry.path, entry.content) } catch (e) { this.gui_error(e) } })
                 }
                 if (/\.cmd$/.test(entry.name)) {
-                    figure.find("img").attr("src", "/src/file-system/gui/file-cmd.png")
+                    figure.find("img").attr("src", GUI.ICONS.CMD)
                     figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry, "x").gui_execute(entry.content) } catch (e) { this.gui_error(e) } })
                 }
         //Folder link
             } else if (entry.folder) {
-                figure.find("img").attr("src", `/src/file-system/gui/folder-${this.entries(entry.id).length ? "files" : "empty"}.png`)
+                figure.find("img").attr("src", this.entries(entry.id).length ? GUI.ICONS.FOLDER_FILES : GUI.ICONS.FOLDER_EMPTY)
                 figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry, "r").gui_list(entry.path, context) } catch (e) { this.gui_error(e) } })
             }
 
@@ -106,7 +106,7 @@
  */
     _gui_icon(src, title) { return $(`
         <figure>
-            <img src="/src/file-system/gui/${src}.png">
+            <img src="${GUI.ICONS._DIR}${src}.png">
             <figcaption>${title}</figcaption>
         </figure>`)
     }
@@ -157,7 +157,7 @@
             let content = context.attr("data-path", path).find(".app-windows-title").text(path).end().find("figure").remove().end().find(".app-windows-content")
         //Add entries icons (and parent directory if not root)
             let entries = this.entries(folder)
-            if (folder !== Entry.ROOT) { this._gui_icon("folder-parent", "../").appendTo(content).click(() => this.gui_list(this.image.entry(folder).parent.path, context)) }
+            if (folder !== Entry.ROOT) { this._gui_icon("folder-parent", "../").appendTo(content).click(() => { try { this.gui_list(this.image.entry(folder).parent.path, context) } catch (e) { this.gui_error(e) } }) }
             entries.sort((a, b) => {
                 if ((a.folder)&&(!b.folder)) { return -1 }
                 if ((!a.folder)&&(b.folder)) { return +1 }

@@ -76,3 +76,11 @@
             } else { $(".app-sessions-msg").empty() }
        } catch (e) { this.gui_error(e) }
     }
+
+/**
+ * Tell if logged user is admin.
+ * @type {Boolean} 
+ */
+    get admin_mode() {
+        return this.user === 0
+    }

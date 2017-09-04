@@ -31,7 +31,7 @@
         this.gui_encrypt()
 
         this.context.contextmenu((ev) => {
-            if ((ev.target.isSameNode($(this.context).get(0)))&&(!$(".app-terminal .app-clippy").length)) {
+            if ((ev.target.isSameNode($(this.context).get(0)))&&(!$(".app-controller .app-clippy").length)) {
                 $(`<div class="app-clippy context"><div>${GUI.TEXT.CLIPPY}</div></div>`).hide().appendTo(this.context).fadeIn("fast")
             }
         })
