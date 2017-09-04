@@ -19,11 +19,16 @@
   },
   "config": {
     "project_name": "File System",
+    "project_repo": "https://github.com/lowlighter/file-system",
+    "project_docs": "https://lowlighter.github.io/file-system/docs",
+    "project_page": "https://lowlight.fr/en/blog/file-system/",
     "source": "./lowlight.fs.js",
     "output": "./../bin/lowlight.fs.js",
     "jsdoc_source": "../../../bin/lowlight.fs.js",
     "jsdoc_output": "../../../docs",
     "jsdoc_config": "./../../conf.json",
-    "jsdoc_readme": "../../../README.md"
+    "jsdoc_readme": "../../../README.md",
+    "demo_template": "./demo/template.html",
+    "demo_output": "./demo/index.html"
   }
 }
