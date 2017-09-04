@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>A*</title>
+    <title>File System</title>
 
     <link type="text/css" rel="stylesheet" href="css/atom-one-dark.css">
     <link type="text/css" rel="stylesheet" href="css/styles.min.css">
@@ -11,7 +11,7 @@
 <body>
 
     <aside>
-        <header><h1>A*</h1></header><ul><li><a href="index.html">Home page</a></li></ul><ul><li class="category">Elements</li><li id="menu-Block"><a href="Block.html">Block</a></li><li id="menu-Entry"><a href="Entry.html">Entry</a></li><li id="menu-Utf8"><a href="Utf8.html">Utf8</a></li><li class="category">Images</li><li id="menu-PictureImage"><a href="PictureImage.html">PictureImage</a></li><li class="category">Interfaces</li><li id="menu-Interface"><a href="Interface.html">Interface</a></li><li class="category">Images</li><li id="menu-Image"><a href="Image.html">Image</a></li><li class="category">Interfaces</li><li id="menu-GUI"><a href="GUI.html">GUI</a></li></ul>
+        <header><h1>File System</h1></header><ul><li><a href="index.html">Home page</a></li></ul><ul><li class="category">Elements</li><li id="menu-Block"><a href="Block.html">Block</a></li><li id="menu-Entry"><a href="Entry.html">Entry</a></li><li id="menu-Utf8"><a href="Utf8.html">Utf8</a></li><li class="category">Images</li><li id="menu-Image"><a href="Image.html">Image</a></li><li id="menu-PictureImage"><a href="PictureImage.html">PictureImage</a></li><li class="category">Interfaces</li><li id="menu-GUI"><a href="GUI.html">GUI</a></li><li id="menu-Interface"><a href="Interface.html">Interface</a></li></ul>
     </aside>
 
     <main>
@@ -1720,7 +1720,7 @@ class Interface {
         this.gui_encrypt()
 
         this.context.contextmenu((ev) => {
-            if ((ev.target.isSameNode($(this.context).get(0)))&amp;&amp;(!$(".app-terminal .app-clippy").length)) {
+            if ((ev.target.isSameNode($(this.context).get(0)))&amp;&amp;(!$(".app-controller .app-clippy").length)) {
                 $(`&lt;div class="app-clippy context">&lt;div>${GUI.TEXT.CLIPPY}&lt;/div>&lt;/div>`).hide().appendTo(this.context).fadeIn("fast")
             }
         })
@@ -1755,7 +1755,7 @@ class Interface {
                     return false
             }   }   })
         //Save event
-            let save = $(`&lt;div class="app-windows-save">&lt;img src="/src/file-system/gui/save.png">&lt;/div>`).appendTo(context.find(".app-windows-bar"))
+            let save = $(`&lt;div class="app-windows-save">&lt;img src="${GUI.ICONS.SAVE}">&lt;/div>`).appendTo(context.find(".app-windows-bar"))
             save.click(() => { try {
                 let txt = $("&lt;div>&lt;/div>").html(context.find(".app-windows-content").html().replace(/&lt;br\s*[\/]?>/gi, "\n")).text()
                 let entry = this.image.entry(this.path(path, Entry.FILE))
@@ -1961,28 +1961,28 @@ class Interface {
         //File extension app link
             if (entry.file) {
                 if (/\.(?:jpeg|jpg|gif|png|apng|svg|bmp|ico)$/.test(entry.name)) {
-                    figure.find("img").attr("src", "/src/file-system/gui/file-img.png")
+                    figure.find("img").attr("src", GUI.ICONS.IMG)
                     figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry).gui_display(entry.path, entry.content) } catch (e) { this.gui_error(e) } })
                 } else
                 if (/\.(?:mp3|mpeg|ogg|wav)$/.test(entry.name)) {
-                    figure.find("img").attr("src", "/src/file-system/gui/file-audio.png")
+                    figure.find("img").attr("src", GUI.ICONS.AUDIO)
                     figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry).gui_play(entry.path, entry.content) } catch (e) { this.gui_error(e) } })
                 } else
                 if (/\.txt$/.test(entry.name)) {
-                    figure.find("img").attr("src", "/src/file-system/gui/file-text.png")
+                    figure.find("img").attr("src", GUI.ICONS.TEXT)
                     figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry).gui_edit(entry.path, entry.content) } catch (e) { this.gui_error(e) } })
                 } else
                 if (/\.conf$/.test(entry.name)) {
-                    figure.find("img").attr("src", "/src/file-system/gui/file-conf.png")
+                    figure.find("img").attr("src", GUI.ICONS.CONF)
                     figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry).gui_edit(entry.path, entry.content) } catch (e) { this.gui_error(e) } })
                 }
                 if (/\.cmd$/.test(entry.name)) {
-                    figure.find("img").attr("src", "/src/file-system/gui/file-cmd.png")
+                    figure.find("img").attr("src", GUI.ICONS.CMD)
                     figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry, "x").gui_execute(entry.content) } catch (e) { this.gui_error(e) } })
                 }
         //Folder link
             } else if (entry.folder) {
-                figure.find("img").attr("src", `/src/file-system/gui/folder-${this.entries(entry.id).length ? "files" : "empty"}.png`)
+                figure.find("img").attr("src", this.entries(entry.id).length ? GUI.ICONS.FOLDER_FILES : GUI.ICONS.FOLDER_EMPTY)
                 figure.click((ev) => { ev.stopPropagation() ; try { this.privileges(entry, "r").gui_list(entry.path, context) } catch (e) { this.gui_error(e) } })
             }
 
@@ -2052,7 +2052,7 @@ class Interface {
  */
     _gui_icon(src, title) { return $(`
         &lt;figure>
-            &lt;img src="/src/file-system/gui/${src}.png">
+            &lt;img src="${GUI.ICONS._DIR}${src}.png">
             &lt;figcaption>${title}&lt;/figcaption>
         &lt;/figure>`)
     }
@@ -2103,7 +2103,7 @@ class Interface {
             let content = context.attr("data-path", path).find(".app-windows-title").text(path).end().find("figure").remove().end().find(".app-windows-content")
         //Add entries icons (and parent directory if not root)
             let entries = this.entries(folder)
-            if (folder !== Entry.ROOT) { this._gui_icon("folder-parent", "../").appendTo(content).click(() => this.gui_list(this.image.entry(folder).parent.path, context)) }
+            if (folder !== Entry.ROOT) { this._gui_icon("folder-parent", "../").appendTo(content).click(() => { try { this.gui_list(this.image.entry(folder).parent.path, context) } catch (e) { this.gui_error(e) } }) }
             entries.sort((a, b) => {
                 if ((a.folder)&amp;&amp;(!b.folder)) { return -1 }
                 if ((!a.folder)&amp;&amp;(b.folder)) { return +1 }
@@ -2159,7 +2159,7 @@ class Interface {
                     let image = callback()
                 //Reset interface
                     this.context.empty()
-                    new GUI(image, $(".app-terminal").get(0))
+                    new GUI(image, $(".app-controller").get(0))
             }
         //Retrieve uploaded file
             let file = $(ev.target).get(0).files[0]
@@ -2341,6 +2341,14 @@ class Interface {
        } catch (e) { this.gui_error(e) }
     }
 
+/**
+ * Tell if logged user is admin.
+ * @type {Boolean} 
+ */
+    get admin_mode() {
+        return this.user === 0
+    }
+
             
 /**
  * Evaluate a command.
@@ -2358,7 +2366,7 @@ class Interface {
                     case "whoami": li.text(`${this.env.USER} (user n° ${this.user})`); break
                 //Application
                     case "explorer": this.gui_list(args[1]||this.pwd); break
-                    case "terminal": $(".app-terminal [data-app-icon=cmd]").click(); break
+                    case "terminal": $(".app-controller [data-app-icon=cmd]").click(); break
                     case "edit": this.gui_edit(args[1], this.image.entry(this.path(args[1], Entry.FILE, this.pwd)).content); break
                     case "play": this.gui_play(args[1], this.image.entry(this.path(args[1], Entry.FILE, this.pwd)).content); break
                     case "display": this.gui_display(args[1], this.image.entry(this.path(args[1], Entry.FILE, this.pwd)).content); break
@@ -2441,8 +2449,8 @@ class Interface {
                         $("li:last-child div").text(args[2].length ? line.replace(new RegExp(args[2]+"\s*$"), "****") : `${line} ****`); break
                     case "users": li.text(this.users_list.join("\n")); break;
                 //Disk format
-                    case "dstat": $(".app-terminal [data-app-icon=dstat]").click(); break
-                    case "dload": $(".app-terminal [data-app-icon=dload]").click(); break
+                    case "dstat": $(".app-controller [data-app-icon=dstat]").click(); break
+                    case "dload": $(".app-controller [data-app-icon=dload]").click(); break
                 //Disk formatting
                     case "dformat":
                         //Size
@@ -2453,15 +2461,14 @@ class Interface {
                             ctx.fillStyle = 0 ; ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
                             this.context.empty()
                         //New GUI
-                            new GUI( new Image(this.image.context, {
+                            if (new GUI( new Image(this.image.context, {
                                 crypted:0,
                                 table:parseInt((line.match(/-table-size=(\d+)/)||[,512])[1]),
                                 block:parseInt((line.match(/-block-size=(\d+)/)||[,256])[1]),
                                 name:parseInt((line.match(/-entry-name-length=(\d+)/)||[,32])[1]),
                                 extended:(line.match(/-table-extended=(y|n)/)||[,"y"])[1] === "y" ? 1 : 0,
-                            }), this.context)
-                        return
-                    case "help": li.text($(`[data-app-help=${args[1]||"help"}]`).text().trim())
+                            }), this.context)) { return }
+                    case "help": li.text($(`[data-app-help=${args[1]||"help"}]`).text().trim()); break; 
                 default:
                     throw new Error(`Unknown command ${args[0]}`)
             }
@@ -2593,7 +2600,7 @@ class Interface {
  */
     gui_window(title = "", content = false) {
         //Windows structure
-            let offset = {top:parseInt($(".app-terminal .app-windows:last-of-type").css("top"))||GUI.OFFSET.TOP.MIN, left:parseInt($(".app-terminal .app-windows:last-of-type").css("left"))||GUI.OFFSET.LEFT.MIN}
+            let offset = {top:parseInt($(".app-controller .app-windows:last-of-type").css("top"))||GUI.OFFSET.TOP.MIN, left:parseInt($(".app-controller .app-windows:last-of-type").css("left"))||GUI.OFFSET.LEFT.MIN}
             let context = $(`
                 &lt;div class="app-windows">
                     &lt;div class="app-windows-bar">
@@ -2621,7 +2628,7 @@ class Interface {
  * Init GUI windows dragging.
  */
     _gui_window_dragging() {
-        $(".app-terminal").mouseup(() => GUI.DRAGGING = false)
+        $(".app-controller").mouseup(() => GUI.DRAGGING = false)
             .mousemove(ev => this._gui_window_dragged(ev))
     }
 
@@ -2643,7 +2650,7 @@ class Interface {
  * @param {Error} e - Error
  */
     gui_error(e) {
-        this.gui_window(e.name).addClass("app-windows-error").find(".app-windows-content").append(`&lt;table>&lt;tr>&lt;td>&lt;img src="/src/file-system/gui/error.png" />&lt;/td>&lt;td>${e.message}&lt;/td>&lt;/tr>&lt;/table>`)
+        this.gui_window(e.name).addClass("app-windows-error").find(".app-windows-content").append(`&lt;table>&lt;tr>&lt;td>&lt;img src="${GUI.ICONS.ERROR}" />&lt;/td>&lt;td>${e.message}&lt;/td>&lt;/tr>&lt;/table>`)
     }
 
 /**
@@ -2674,8 +2681,8 @@ class Interface {
     GUI.OFFSET.LEFT = {VAL:10, MIN:60}
 
 //Dimensions
-    GUI.WIDTH = $(".app-terminal").width()
-    GUI.HEIGHT = $(".app-terminal").height()
+    Object.defineProperty(GUI, "WIDTH", {get() { return $(".app-controller").width() } })
+    Object.defineProperty(GUI, "HEIGHT", {get() { return $(".app-controller").height() } })
     GUI.WINDOW_WIDTH  = 300
     GUI.WINDOW_HEIGHT  = 250
 
@@ -2683,7 +2690,11 @@ class Interface {
     GUI.COMMANDS = ["pwd", "env", "whoami", "users", "dstat", "dload", "encrypt", "decrypt", "adduser", "deluser", "su", "explorer", "terminal", "edit", "play", "display", "exec", "cd", "mkdir", "mkfile", "dformat", "help", "rm", "chown", "stat", "chmod", "mv", "ls", "tree"]
 
 
-//Text
+/**
+ * Texts.
+ * @type {Object}
+ * @memberof GUI
+ */
     GUI.TEXT = {
         MK_NEW_FILE:$(".text-mk-new-file").text(),
         MK_NEW_FOLDER:$(".text-mk-new-folder").text(),
@@ -2765,6 +2776,24 @@ class Interface {
         CLIPPY:$(".text-clippy-msg").text()
     }
 
+/**
+ * Paths to icons.
+ * @type {Object}
+ * @memberof GUI
+ */
+    GUI.ICONS = {
+        _DIR:"gui/",
+        SAVE:"gui/save.png",
+        IMG:"gui/file-img.png",
+        AUDIO:"gui/file-audio.png",
+        TEXT:"gui/file-text.png",
+        CONF:"gui/file-conf.png",
+        CMD:"gui/file-cmd.png",
+        ERROR:"gui/error.png",
+        FOLDER_EMPTY:"gui/folder-empty.png",
+        FOLDER_FILES:"gui/folder-files.png"
+    }
+
 
         global.Lowlight.FileSystem = {Block, Entry, Utf8, Image, PictureImage, Interface, GUI}
 })(typeof window !== "undefined" ? window : this)
@@ -2774,7 +2803,7 @@ class Interface {
 
         </section>
         <footer>
-            Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Aug 04 2017 16:04:05 GMT+0200 (Paris, Madrid (heure d’été))
+            Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Sep 04 2017 18:08:03 GMT+0200 (Paris, Madrid (heure d’été))
             <br />
             Embellished by <a href="https://github.com/lowlighter/jsdoc-spotlight">Spotlight</a> theme
         </footer>

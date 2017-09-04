@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>A*</title>
+    <title>File System</title>
 
     <link type="text/css" rel="stylesheet" href="css/atom-one-dark.css">
     <link type="text/css" rel="stylesheet" href="css/styles.min.css">
@@ -11,7 +11,7 @@
 <body>
 
     <aside>
-        <header><h1>A*</h1></header><ul><li><a href="index.html">Home page</a></li></ul><ul><li class="category">Elements</li><li id="menu-Block"><a href="Block.html">Block</a></li><li id="menu-Entry"><a href="Entry.html">Entry</a></li><li id="menu-Utf8"><a href="Utf8.html">Utf8</a></li><li class="category">Images</li><li id="menu-PictureImage"><a href="PictureImage.html">PictureImage</a></li><li class="category">Interfaces</li><li id="menu-Interface"><a href="Interface.html">Interface</a></li><li class="category">Images</li><li id="menu-Image"><a href="Image.html">Image</a></li><li class="category">Interfaces</li><li id="menu-GUI"><a href="GUI.html">GUI</a></li></ul>
+        <header><h1>File System</h1></header><ul><li><a href="index.html">Home page</a></li></ul><ul><li class="category">Elements</li><li id="menu-Block"><a href="Block.html">Block</a></li><li id="menu-Entry"><a href="Entry.html">Entry</a></li><li id="menu-Utf8"><a href="Utf8.html">Utf8</a></li><li class="category">Images</li><li id="menu-Image"><a href="Image.html">Image</a></li><li id="menu-PictureImage"><a href="PictureImage.html">PictureImage</a></li><li class="category">Interfaces</li><li id="menu-GUI"><a href="GUI.html">GUI</a></li><li id="menu-Interface"><a href="Interface.html">Interface</a></li></ul>
     </aside>
 
     <main>
@@ -40,17 +40,265 @@
 
     <section>
         <div class="readme">
-            <h1>Title</h1><p>Description</p>
+            <h1>File System</h1><p>This library is an implementation of an &quot;homemade&quot; File System, similar to <a href="https://en.wikipedia.org/wiki/File_Allocation_Table">FAT</a>.
+It's based on <a href="https://en.wikipedia.org/wiki/Steganography">steganography</a> so data can be stored and loaded from a supported image file
+<em>(Image must be drawable with <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage</a>)</em>.
+A <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI</a> is also included with multiples applications.</p>
 <ul>
-<li><a href="https://lowlighter.github.io/demo/">Live demo</a></li>
-<li><a href="https://lowlighter.github.io/docs/">Documentation</a></li>
+<li><a href="https://lowlighter.github.io/file-system/demo/">Live demo</a></li>
+<li><a href="https://lowlighter.github.io/file-system/docs/">Documentation</a></li>
+<li><a href="https://lowlight.fr/en/blog/file-system/">About</a></li>
 </ul>
+<p><img src="https://github.com/lowlighter/file-system/raw/master/demo/imgs/demo.png" alt="Image of file system"></p>
 <h1>Features</h1><ul>
-<li>Features</li>
+<li><p><strong>Configurable</strong> Image disk</p>
+<ul>
+<li><strong>size</strong> : change image size</li>
+<li><strong>table size</strong> : change max entries <em>(folders and files)</em> number</li>
+<li><strong>block size</strong> : change block size</li>
+<li><strong>entry name length</strong> : change number of bytes allocated to entries names</li>
+<li><strong>table extended</strong> : choose if creation and last edition dates and permissions should be stored in FAT</li>
 </ul>
-<h2>Getting Started</h2><p>First of all, you need to include the library :</p>
-<pre class="prettyprint source lang-html"><code>    &lt;script src=&quot;./bin/lowlight.script.js&quot;>&lt;/script></code></pre><p>Then you may want create an alias for convenience :</p>
-<pre class="prettyprint source lang-javascript"><code></code></pre><h2>Project content</h2><table>
+</li>
+<li><p><strong>Graphical user interface</strong> (GUI) included with the following applications :</p>
+<ul>
+<li><strong>File Explorer</strong> : navigate through the disk easily<ul>
+<li><strong>Create</strong>, <strong>delete</strong> and <strong>edit</strong> files and folders</li>
+<li>Show <strong>file</strong> and <strong>disk</strong> properties**</li>
+<li>Support <strong>hidden</strong> entries</li>
+</ul>
+</li>
+<li><strong>Command-line interface</strong> : use powerful commands</li>
+<li><strong>User sessions</strong> : manage sessions</li>
+<li><strong>Image loader</strong> : load existing image</li>
+<li><strong>Disk dissembler (using steganography)</strong> : hide data on an existing image</li>
+<li><strong>Disk encrypter/decrypter*</strong> : protect data with a passphrase</li>
+<li><strong>Text editor</strong> : Create and edit text files</li>
+<li><strong>Image displayer</strong> : Display Base64 encoded image files</li>
+<li><strong>Audio player</strong> : Play Base64 encoded audio files</li>
+<li><strong>Script interpreter</strong> : Expand functionnality yourself thanks to the JavaScript interpreter</li>
+</ul>
+</li>
+</ul>
+<h2>Getting Started</h2><p>First of all, you'll need to include the library :</p>
+<pre class="prettyprint source lang-html"><code>    &lt;script src=&quot;./bin/lowlight.fs.js&quot;>&lt;/script></code></pre><p>You may include the minified library instead :</p>
+<pre class="prettyprint source lang-html"><code>    &lt;script src=&quot;./bin/lowlight.fs.min.js&quot;>&lt;/script></code></pre><p>Then you may create alias for convenience :</p>
+<pre class="prettyprint source lang-javascript"><code>    let GUI = Lowlight.FileSystem.GUI
+    let Image = Lowlight.FileSystem.Image</code></pre><p>Note that <a href="https://jquery.com/">jQuery</a> is used by this library and must be loaded first :</p>
+<pre class="prettyprint source lang-html"><code>    &lt;script src=&quot;./path/to/jquery.js&quot;>&lt;/script></code></pre><h2>Setup</h2><p>The following html structure is required :</p>
+<pre class="prettyprint source lang-html"><code>    &lt;canvas class=&quot;app-view&quot; width=&quot;400&quot; height=&quot;400&quot;>
+    &lt;div class=&quot;app-controller&quot;>&lt;/div></code></pre><p>Then add the following code snippet :</p>
+<pre class="prettyprint source lang-javascript"><code>    $(&quot;&lt;img>&quot;).attr(&quot;src&quot;, &quot;/src/file-system/demo/image.png&quot;).on(&quot;load&quot;, function () {
+        //Draw initial image
+            $(&quot;.app-view canvas&quot;).get(0).getContext(&quot;2d&quot;).drawImage($(this).get(0), 0, 0)
+        //Create interface
+            new GUI(
+                Image.open($(&quot;.app-view canvas&quot;).get(0).getContext(&quot;2d&quot;)),
+                $(&quot;.app-controller&quot;).get(0)
+            )
+    })</code></pre><p>You may also add the stylesheet and pictures from <code>/demo</code> to have a nice GUI visual render.</p>
+<p>If you're a developper and want to expand library, you may want to read <a href="https://lowlighter.github.io/file-system/docs/">documentation</a>
+to understand how this project has been coded.</p>
+<p>Don't forget to check and update <code>src/Interfaces/GUI/Gui.static.js</code> to update text and icons.</p>
+<h2>Commands list</h2><p>GUI is pretty intuitive but if you want to use command-line interface instead, you can use the following commands.
+Note that's the only way to create a new disk.</p>
+<h3>Applications</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>help</strong> [command=help]</td>
+<td>Display help for a given command</td>
+</tr>
+<tr>
+<td><strong>explorer</strong> [path=pwd]</td>
+<td>Open a new instance of file explorer</td>
+</tr>
+<tr>
+<td><strong>terminal</strong></td>
+<td>Open a new command-line interface</td>
+</tr>
+</tbody>
+</table>
+<h3>Entries management</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>rm</strong> <path> [-r]</td>
+<td>Remove an entry (add <strong>-r</strong> to remove recursively a folder)</td>
+</tr>
+<tr>
+<td><strong>mv</strong> <path> <target> [-f]</td>
+<td>Move an entry (add <strong>-f</strong> to target folders) and can also be used to rename an entry</td>
+</tr>
+<tr>
+<td><strong>stat</strong> <path></td>
+<td>Display an entry properties (add <strong>-f</strong> to target folders)</td>
+</tr>
+<tr>
+<td><strong>chmod</strong> [-r&vert;+r] [-w&vert;+w] [-x&vert;+x] [-d&vert;+d] [-R&vert;+R] [-W&vert;+W] [-X&vert;+X] [-D&vert;+D] [-f]</td>
+<td>Edit entries permissions (add <strong>+r</strong>, <strong>+w</strong>, <strong>+x</strong>, <strong>+d</strong> to add read, write, execution and deletion rights and <strong>-r</strong>, <strong>-w</strong>, <strong>-x</strong>, <strong>-d</strong> to remove them. In lowercase for the owner and uppercase for the others. Add <strong>-f</strong> to target folders)</td>
+</tr>
+<tr>
+<td><strong>chown</strong> <path> <user> [-f]</td>
+<td>Change the owner of an entry (add <strong>-f</strong> to target folders)</td>
+</tr>
+</tbody>
+</table>
+<h3>Folders management</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>cd</strong> [path=/home]</td>
+<td>Change current directory</td>
+</tr>
+<tr>
+<td><strong>mkdir</strong> <path></td>
+<td>Create a new directory</td>
+</tr>
+<tr>
+<td><strong>ls</strong> [path=pwd] [-a] [-l] [-type=ALL&vert;FOLDER&vert;FILE]</td>
+<td>List entries of directory (add <strong>-a</strong> to show hidden entries, <strong>-l</strong> to display properties of each entries and <strong>-type</strong> to filter entries types)</td>
+</tr>
+<tr>
+<td><strong>tree</strong> [path=pwd] [-a]</td>
+<td>Display directory tree (add <strong>-a</strong> to show hidden entries)</td>
+</tr>
+</tbody>
+</table>
+<h3>Files management</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>mkfile</strong> <path></td>
+<td>Create a new file</td>
+</tr>
+<tr>
+<td><strong>edit</strong> <path></td>
+<td>Open a file as a text file</td>
+</tr>
+<tr>
+<td><strong>display</strong> <path></td>
+<td>Open a file as an image file</td>
+</tr>
+<tr>
+<td><strong>play</strong> <path></td>
+<td>Open a file as an audio file</td>
+</tr>
+<tr>
+<td><strong>exec</strong> <path></td>
+<td>Open a file as a script file</td>
+</tr>
+</tbody>
+</table>
+<h3>Users management</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>su</strong> <user> [password]</td>
+<td>Login with another user account</td>
+</tr>
+<tr>
+<td><strong>adduser</strong> <user> [password]</td>
+<td>Create a new user account</td>
+</tr>
+<tr>
+<td><strong>deluser</strong> <user> <password></td>
+<td>Delete an existing user account</td>
+</tr>
+<tr>
+<td><strong>users</strong></td>
+<td>Display users list</td>
+</tr>
+<tr>
+<td><strong>whoami</strong></td>
+<td>Display current user account name</td>
+</tr>
+</tbody>
+</table>
+<h3>Encryption and decryption</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>encrypt</strong> <key></td>
+<td>Encrypt disk data</td>
+</tr>
+<tr>
+<td><strong>decrypt</strong> <key></td>
+<td>Decrypt disk data</td>
+</tr>
+</tbody>
+</table>
+<h3>System</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>pwd</strong></td>
+<td>Display path working directory</td>
+</tr>
+<tr>
+<td><strong>env</strong></td>
+<td>Display environnment variables</td>
+</tr>
+<tr>
+<td><strong>dstat</strong></td>
+<td>Display disk properties</td>
+</tr>
+</tbody>
+</table>
+<h3>Disk image</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>dload</strong></td>
+<td>Open disk loader</td>
+</tr>
+<tr>
+<td><strong>dformat</strong> [-size=400x400] [-table-size=512] [-block-size=256] [-entry-name-length=8&vert;16&vert;24&vert;32] [-table-extended=y&vert;n]</td>
+<td>Create a new image (will reload interface after creation)</td>
+</tr>
+</tbody>
+</table>
+<h2>Project content</h2><table>
 <thead>
 <tr>
 <th></th>
@@ -60,7 +308,7 @@
 <tbody>
 <tr>
 <td><strong>/bin</strong></td>
-<td>Production and test files</td>
+<td>Live and dev scrripts files</td>
 </tr>
 <tr>
 <td><strong>/src</strong></td>
@@ -72,15 +320,22 @@
 </tr>
 <tr>
 <td><strong>/docs</strong></td>
-<td>Library's documentations</td>
+<td>Documentation</td>
 </tr>
 </tbody>
 </table>
-<h3>Rebuild project</h3><p>If you need to rebuild project, just run the following command :</p>
-<pre class="prettyprint source"><code>npm run build
-# /bin will be updated with /src scripts files
-# /docs will be updated</code></pre><p>Don't forget to install dependencies before running the previous command.</p>
-<pre class="prettyprint source"><code>npm install</code></pre><h2>License</h2><p>This project is licensed under the MIT License. See <a href="https://github.com/lowlighter/#######/blob/master/LICENSE.md">LICENSE.md</a> file for details.</p>
+<h2>Rebuild project and expanding the library</h2><p>You'll need to run the following command the first time to install dependencies.</p>
+<pre class="prettyprint source lang-shell"><code>npm install</code></pre><p>Then to rebuild project, just run the following command :</p>
+<pre class="prettyprint source lang-shell"><code>npm run build</code></pre><p>This will update <code>/bin</code> files with included <code>/src</code> files.
+Although <code>package.json</code> (which contains <code>&quot;source&quot; and &quot;output&quot;</code> paths) are preconfigured, you may need to reconfigure them if you're planning to expand this library.</p>
+<p>To include a file just use the following syntax in the <code>&quot;source&quot;</code> file :</p>
+<pre class="prettyprint source lang-javascript"><code>    /* #include &lt;path/to/file.js> */</code></pre><ul>
+<li>File minification is performed with <a href="https://github.com/babel/minify">Babel minify</a>.</li>
+<li>Documentation is generated with <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a>.</li>
+</ul>
+<p>Although <code>package.json</code> (which contains <code>&quot;jsdoc_source&quot;, &quot;jsdoc_output&quot;, &quot;jsdoc_config&quot; and &quot;jsdoc_readme&quot;</code>) and <code>docs/categories.json</code> are preconfigured, you may need to reconfigure them if you're planning to expand this library.</p>
+<h2>License</h2><p>This project is licensed under the MIT License.</p>
+<p>See <a href="https://github.com/lowlighter/file-system/blob/master/LICENSE.md">LICENSE.md</a> file for details.</p>
         </div>
     </section>
 
@@ -88,7 +343,7 @@
 
         </section>
         <footer>
-            Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Aug 04 2017 16:04:05 GMT+0200 (Paris, Madrid (heure d’été))
+            Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Sep 04 2017 18:08:03 GMT+0200 (Paris, Madrid (heure d’été))
             <br />
             Embellished by <a href="https://github.com/lowlighter/jsdoc-spotlight">Spotlight</a> theme
         </footer>
