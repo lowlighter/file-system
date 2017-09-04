@@ -1,0 +1,395 @@
+@font-face {
+  font-family: "password";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/password/password.ttf);
+}
+.height {
+  height: 100%;
+}
+.width {
+  width: 100%;
+}
+.height-vh {
+  height: 100vh;
+}
+.bold {
+  font-weight: bold;
+}
+.bolder {
+  font-weight: bolder;
+}
+.ital {
+  font-style: italic;
+}
+.small {
+  font-size: 14px;
+}
+.medium {
+  font-size: 16px;
+}
+.tall {
+  font-size: 18px;
+}
+.xtall {
+  font-size: 24px;
+}
+.inline-block {
+  display: inline-block;
+}
+.fixed {
+  position: fixed ;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.hidden {
+  display: none;
+}
+div.app-controller {
+  background-image: url(../gui/wallpaper.png);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  font-family: helvetica;
+  font-size: 12px;
+}
+div.app-controller .app-clippy {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  background-image: url(../gui/clippy.png);
+  background-size: cover;
+}
+div.app-controller .app-clippy > div {
+  position: absolute;
+  width: 120px;
+  height: 50px;
+  left: -110px;
+  top: -40px;
+  border-radius: 5px;
+  border: 1px solid #0C0C0C;
+  background-color: #FFFFCC;
+  padding: 5px;
+  color: #0C0C0C;
+  font-size: 10px;
+}
+div.app-controller [name="app-load-image"] {
+  display: none;
+}
+div.app-controller ul.context {
+  position: absolute;
+  z-index: 999;
+  margin: 0px;
+  padding: 0px;
+  background-color: #ABB2BF;
+  color: #0C0C0C;
+  list-style-type: none;
+  border-width: 2px;
+  border-color: #C0C0C0 #0C0C0C #0C0C0C #C0C0C0;
+  border-style: groove solid solid groove;
+}
+div.app-controller ul.context li {
+  padding: 4px;
+}
+div.app-controller ul.context li:hover {
+  background-color: #010081;
+  color: #FFF;
+}
+div.app-controller .app-windows {
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  color: #0C0C0C;
+  background-color: #FFF;
+  border-width: 3px;
+  border-color: #C0C0C0 #0C0C0C #0C0C0C #C0C0C0;
+  border-style: groove solid solid groove;
+}
+div.app-controller .app-windows table {
+  padding: 0;
+  margin: 0;
+  color: #0C0C0C;
+  font-family: inherit;
+  height: auto;
+}
+div.app-controller .app-windows table button {
+  font-family: inherit;
+  padding: 0;
+  border-radius: 0;
+  width: auto;
+}
+div.app-controller .app-windows.active {
+  z-index: 998;
+}
+div.app-controller .app-windows.app-windows-image {
+  text-align: center;
+  background-color: #0C0C0C;
+}
+div.app-controller .app-windows.app-windows-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+div.app-controller .app-windows.app-windows-audio {
+  text-align: center;
+  background-color: #0C0C0C;
+  height: 54px;
+}
+div.app-controller .app-windows.app-windows-audio audio {
+  width: 100%:
+                                height: 32px;
+}
+div.app-controller .app-windows.app-windows-error {
+  background-color: #BFB8BF;
+  width: 200px;
+  height: 105px;
+}
+div.app-controller .app-windows.app-windows-error table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+div.app-controller .app-windows.app-windows-error table td {
+  padding: 0;
+}
+div.app-controller .app-windows.app-windows-error table td:first-child {
+  width: 40px;
+}
+div.app-controller .app-windows.app-windows-terminal {
+  color: #FFF;
+  background-color: #0C0C0C;
+}
+div.app-controller .app-windows.app-windows-terminal ul {
+  font-family: Monospace;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+div.app-controller .app-windows.app-windows-terminal ul li div {
+  display: inline-block;
+}
+div.app-controller .app-windows.app-windows-terminal ul li:last-child {
+  font-weight: bold;
+}
+div.app-controller .app-windows.app-windows-terminal .app-cmd-error {
+  color: red;
+}
+div.app-controller .app-windows.app-sessions,
+div.app-controller .app-windows.app-input {
+  background-color: #BFB8BF;
+  width: 200px;
+  height: 105px;
+}
+div.app-controller .app-windows.app-sessions .app-windows-bar,
+div.app-controller .app-windows.app-input .app-windows-bar {
+  background-color: #7F787F;
+}
+div.app-controller .app-windows.app-sessions .app-sessions-password,
+div.app-controller .app-windows.app-input .app-sessions-password {
+  font-family: "password";
+}
+div.app-controller .app-windows.app-sessions table td,
+div.app-controller .app-windows.app-input table td,
+div.app-controller .app-windows.app-sessions table th,
+div.app-controller .app-windows.app-input table th {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: 100px;
+}
+div.app-controller .app-windows.app-sessions table td.app-steganography-msg,
+div.app-controller .app-windows.app-input table td.app-steganography-msg,
+div.app-controller .app-windows.app-sessions table th.app-steganography-msg,
+div.app-controller .app-windows.app-input table th.app-steganography-msg,
+div.app-controller .app-windows.app-sessions table td.app-alert-msg,
+div.app-controller .app-windows.app-input table td.app-alert-msg,
+div.app-controller .app-windows.app-sessions table th.app-alert-msg,
+div.app-controller .app-windows.app-input table th.app-alert-msg {
+  width: 200px;
+}
+div.app-controller .app-windows.app-sessions table td:nth-child(2),
+div.app-controller .app-windows.app-input table td:nth-child(2),
+div.app-controller .app-windows.app-sessions table th:nth-child(2),
+div.app-controller .app-windows.app-input table th:nth-child(2) {
+  background-color: #FFF;
+  border-width: 1px;
+  border-color: #C0C0C0 #0C0C0C #0C0C0C #C0C0C0;
+  border-style: groove solid solid inset;
+}
+div.app-controller .app-windows.app-sessions table tr:last-child,
+div.app-controller .app-windows.app-input table tr:last-child {
+  text-align: right;
+}
+div.app-controller .app-windows.app-sessions button,
+div.app-controller .app-windows.app-input button {
+  border-radius: 0;
+  background-color: #7F787F;
+  color: #0C0C0C;
+  font-family: inherit;
+  font-size: 14px;
+  width: auto;
+  min-width: 0;
+  padding: 0px 2px;
+  margin: 0;
+  border-width: 1px;
+  border-color: #C0C0C0 #0C0C0C #0C0C0C #C0C0C0;
+  border-style: groove solid solid groove;
+}
+div.app-controller .app-windows.app-sessions button.disabled,
+div.app-controller .app-windows.app-input button.disabled {
+  opacity: 0.5;
+}
+div.app-controller .app-windows.app-entry-properties,
+div.app-controller .app-windows.app-disk-properties {
+  background-color: #BFB8BF;
+  width: 180px;
+  height: 220px;
+}
+div.app-controller .app-windows.app-entry-properties .app-windows-bar,
+div.app-controller .app-windows.app-disk-properties .app-windows-bar {
+  background-color: #7F787F;
+}
+div.app-controller .app-windows.app-entry-properties .app-windows-content,
+div.app-controller .app-windows.app-disk-properties .app-windows-content {
+  overflow-y: scroll;
+}
+div.app-controller .app-windows.app-entry-properties table,
+div.app-controller .app-windows.app-disk-properties table {
+  border-collapse: collapse;
+  width: 180px;
+  vertical-align: top;
+}
+div.app-controller .app-windows.app-entry-properties table td,
+div.app-controller .app-windows.app-disk-properties table td,
+div.app-controller .app-windows.app-entry-properties table th,
+div.app-controller .app-windows.app-disk-properties table th {
+  padding: 0;
+  margin: 0;
+  height: auto;
+}
+div.app-controller .app-windows.app-entry-properties table td:first-child,
+div.app-controller .app-windows.app-disk-properties table td:first-child,
+div.app-controller .app-windows.app-entry-properties table th:first-child,
+div.app-controller .app-windows.app-disk-properties table th:first-child {
+  font-weight: bold;
+  width: 80px;
+}
+div.app-controller .app-windows.app-entry-properties table td:last-child,
+div.app-controller .app-windows.app-disk-properties table td:last-child,
+div.app-controller .app-windows.app-entry-properties table th:last-child,
+div.app-controller .app-windows.app-disk-properties table th:last-child {
+  width: 100px;
+}
+div.app-controller .app-windows.app-entry-properties table.app-entry-properties-permissions td,
+div.app-controller .app-windows.app-disk-properties table.app-entry-properties-permissions td,
+div.app-controller .app-windows.app-entry-properties table.app-entry-properties-permissions th,
+div.app-controller .app-windows.app-disk-properties table.app-entry-properties-permissions th {
+  width: 50px;
+}
+div.app-controller .app-windows.app-entry-properties table.app-entry-properties-permissions td:first-child,
+div.app-controller .app-windows.app-disk-properties table.app-entry-properties-permissions td:first-child,
+div.app-controller .app-windows.app-entry-properties table.app-entry-properties-permissions th:first-child,
+div.app-controller .app-windows.app-disk-properties table.app-entry-properties-permissions th:first-child {
+  font-weight: bold;
+  width: 80px;
+}
+div.app-controller .app-windows.app-entry-properties table.app-entry-properties-permissions td:not(:last-child),
+div.app-controller .app-windows.app-disk-properties table.app-entry-properties-permissions td:not(:last-child),
+div.app-controller .app-windows.app-entry-properties table.app-entry-properties-permissions th:not(:last-child),
+div.app-controller .app-windows.app-disk-properties table.app-entry-properties-permissions th:not(:last-child) {
+  border-right: 1px solid #0C0C0C;
+}
+div.app-controller .app-windows.app-entry-properties table.app-entry-properties-permissions tr:first-child,
+div.app-controller .app-windows.app-disk-properties table.app-entry-properties-permissions tr:first-child {
+  border-bottom: 1px solid #0C0C0C;
+}
+div.app-controller .app-windows.app-windows-editor .app-windows-content {
+  font-family: Monospace;
+  background-color: #282C34;
+  color: #ABB2BF;
+  padding: 4px;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  width: 292px;
+}
+div.app-controller .app-windows .app-windows-content {
+  position: absolute;
+  top: 22px;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+}
+div.app-controller .app-windows .app-windows-bar {
+  position: absolute;
+  width: 100%;
+  height: 22px;
+  background-color: #0000BF;
+  font-family: inherit;
+  color: #0C0C0C;
+}
+div.app-controller .app-windows .app-windows-bar .app-windows-title {
+  padding: 4px 6px 0px;
+  display: inline-block;
+  font-size: 12px;
+  color: #FFF;
+  float: left;
+}
+div.app-controller .app-windows .app-windows-bar .app-windows-close,
+div.app-controller .app-windows .app-windows-bar .app-windows-save {
+  text-align: center;
+  padding: 0px 3px;
+  background-color: #C0C0C0;
+  display: inline-block;
+  margin: 2px;
+  float: right;
+  border-width: 2px;
+  border-color: #C0C0C0 #0C0C0C #0C0C0C #C0C0C0;
+  border-style: groove solid solid groove;
+}
+div.app-controller .app-windows .app-windows-bar .app-windows-close.app-windows-save,
+div.app-controller .app-windows .app-windows-bar .app-windows-save.app-windows-save {
+  padding: 0px;
+  width: 16px;
+  height: 14px;
+  overflow: hidden;
+}
+div.app-controller .app-windows .app-windows-bar .app-windows-close.app-windows-save img,
+div.app-controller .app-windows .app-windows-bar .app-windows-save.app-windows-save img {
+  width: 13px;
+}
+div.app-controller [data-hidden=show] figure.app-entry-hidden {
+  display: inline-block;
+}
+div.app-controller figure {
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+div.app-controller figure.app-entry-hidden {
+  display: none;
+  opacity: 0.4;
+}
+div.app-controller figure figcaption {
+  font-size: 9px;
+  width: 48px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+div.app-controller figure figcaption::selection {
+  background-color: #010081;
+  color: #FFF;
+}
+div.app-controller figure figcaption::-moz-selection {
+  background-color: #010081;
+  color: #FFF;
+}

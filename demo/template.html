@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{TITLE}}</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/atom-one-dark.css">
+        <link rel="stylesheet" href="css/fs.css">
+    </head>
+    <body>
+        <header>
+            <h1>{{TITLE}}</h1>
+            <nav>
+                <a href="{{REPO}}">GitHub</a>
+                <a href="{{DOCS}}">Documentation</a>
+                <a href="{{PAGE}}">lowlight.fr</a>
+            </nav>
+        </header>
+        <main class="container-full">
+            <div class="container">
+                <p>
+                    This is a live demo from this <a href="{{REPO}}">library</a>.
+                </p>
+                <p>
+                    This library is an implementation of an "homemade" File System, similar to FAT.
+                    It's based on steganography so data can be stored and loaded from a supported image file (Image must be drawable with CanvasRenderingContext2D.drawImage).
+                    A GUI is also included with multiples applications.
+                </p>
+                <p>
+                    See it on <a href="{{REPO}}">GitHub</a> for more informations.
+                </p>
+                <p class="local-warning">
+                    It seems you're running this file from a local file system.<br />
+                    Cross origin requests may be supported only for protocol schemes on some browsers.
+                </p>
+            </div>
+            <div class="container app">
+                <div class="app-view">
+                    <canvas width="400" height="400"></canvas>
+                </div>
+                <div class="app-controller">
+                </div>
+            </div>
+        </main>
+        <div class="container-full">
+            <pre>
+                <code>
+    $(function () {
+        //Shortcuts
+            let GUI = Lowlight.FileSystem.GUI, Image = Lowlight.FileSystem.Image
+        //Demo
+            $("<img>").attr("src", "./imgs/image.png").on("load", function () {
+                $(".app-view canvas").get(0).getContext("2d").drawImage($(this).get(0), 0, 0)
+                new GUI(
+                    Image.open($(".app-view canvas").get(0).getContext("2d")),
+                    $(".app-controller").get(0)
+                )
+            })
+    })</code>
+            </pre>
+        </div>
+
+        <div class="hidden">
+            <img src="imgs/picture-steganography.png" class="steganography-picture">
+            <p class="text-no-audio">Impossible to read</p>
+            <p class="text-properties">Properties</p>
+            <p class="text-name">Name</p>
+            <p class="text-parent">Parent folder</p>
+            <p class="text-block">Memory index</p>
+            <p class="text-size">Size (on disk)</p>
+            <p class="text-type">Type</p>
+            <p class="text-type-file">File</p>
+            <p class="text-type-folder">Folder</p>
+            <p class="text-visibility">Visibility</p>
+            <p class="text-visibility-visible">Visible</p>
+            <p class="text-visibility-hidden">Hidden</p>
+            <p class="text-owner">Owner</p>
+            <p class="text-date-creation">Creation date</p>
+            <p class="text-date-edition">Edition date</p>
+            <p class="text-permissions">Permissions</p>
+            <p class="text-permissions-owner">Owner</p>
+            <p class="text-permissions-others">All</p>
+            <p class="text-permissions-yes">Yes</p>
+            <p class="text-permissions-no">No</p>
+            <p class="text-permissions-r">Read</p>
+            <p class="text-permissions-w">Write</p>
+            <p class="text-permissions-x">Execute</p>
+            <p class="text-permissions-d">Delete</p>
+            <p class="text-sessions">Sessions</p>
+            <p class="text-sessions-user">User</p>
+            <p class="text-sessions-password">Password</p>
+            <p class="text-sessions-remove">Delete</p>
+            <p class="text-sessions-create">Create</p>
+            <p class="text-sessions-login">Login</p>
+            <p class="text-explorer">Explorer</p>
+            <p class="text-terminal">Terminal</p>
+            <p class="text-new-file">file.txt</p>
+            <p class="text-new-folder">folder</p>
+            <p class="text-rename">Rename</p>
+            <p class="text-remove">Delete</p>
+            <p class="text-move-to">Move to...</p>
+            <p class="text-mk-new-file">New file</p>
+            <p class="text-mk-new-folder">New folder</p>
+            <p class="text-open-with">Open with...</p>
+            <p class="text-open-directory">Open</p>
+            <p class="text-open-with-text">Text editor</p>
+            <p class="text-open-with-image">Image displayer</p>
+            <p class="text-open-with-audio">Audio player</p>
+            <p class="text-encryption">Encryption</p>
+            <p class="text-sessions-remove-done">User %s deleted</p>
+            <p class="text-sessions-create-done">User %s added</p>
+            <p class="text-sessions-login-done">Logged as %s</p>
+            <p class="text-sessions-logged-as">Welcome, %s</p>
+            <p class="text-validate">Validate</p>
+            <p class="text-move-to-invalid-path">Invalid or already existing path</p>
+            <p class="text-config">Configuration</p>
+            <p class="text-image-manager">Load image</p>
+            <p class="text-terminal-full">Command-line interpreter</p>
+            <p class="text-unknown">Unsupported image</p>
+            <p class="text-image">Basic image</p>
+            <p class="text-picture">Steganographied image</p>
+            <p class="text-unimplemented">(unimplemented)</p>
+            <p class="text-empty-folder">(empty folder)</p>
+            <p class="text-encryption-tool">Encryption tool</p>
+            <p class="text-encryption-key">Key</p>
+            <p class="text-encryption-decrypt">Decrypt</p>
+            <p class="text-encryption-encrypt">Encrypt</p>
+            <p class="text-config-signature">Signature</p>
+            <p class="text-config-crypted">Encryption</p>
+            <p class="text-config-entry-name">Entry name length</p>
+            <p class="text-config-extended">Extended table</p>
+            <p class="text-config-size">Total size</p>
+            <p class="text-config-used">Used space</p>
+            <p class="text-config-free">Available space</p>
+            <p class="text-config-table-size">Table entries</p>
+            <p class="text-config-block-size">Block size</p>
+            <p class="text-config-block-number">Number of blocks</p>
+            <p class="text-config-width">Width</p>
+            <p class="text-config-height">Height</p>
+            <p class="text-config-yes">Yes</p>
+            <p class="text-config-no">No</p>
+            <p class="text-encryption-missing-key">Invalid key</p>
+            <p class="text-encryption-success">Image encrypted, don't forget the key !</p>
+            <p class="text-decryption-success">Image decrypted !</p>
+            <p class="text-image-manager-stegano">Steganography</p>
+            <p class="text-steganography-tool">Steganography</p>
+            <p class="text-open-with-cmd">Command-line interpreter</p>
+            <p class="text-steganography-info">This utilitary will insert current image data in another image that you'll need to upload.</p>
+            <p class="text-script-msg">This script will delete audio file (very voluminous) and will launch a demo of steganography. This may take some time to perform.</p>
+            <p class="text-show-hidden">Hidden entries</p>
+            <p class="text-clippy-msg">Sometimes I just popup for no particular reason, like now</p>
+        </div>
+
+        <script type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./../bin/lowlight.fs.min.js"></script>
+        <script type="text/javascript" src="./js/lowlight.random.min.js"></script>
+        <script type="text/javascript" src="./js/demo.js"></script>
+        <script type="text/javascript" src="./js/highlight.pack.js"></script>
+        <script type="text/javascript"></script>
+        <script>hljs.initHighlightingOnLoad()</script>
+        <script type="text/javascript">if (/file/.test(window.location.protocol)) { $(".local-warning").show() }</script>
+    </body>
+</html>
