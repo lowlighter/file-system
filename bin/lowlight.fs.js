@@ -670,6 +670,15 @@ class Image {
         }
 
     /**
+     * Constructor name (unaccessible otherwise because of minification).
+     * @type {String}
+     * @const
+     * @private
+     * @override
+     */
+        get image_type() { return "Image" }
+
+    /**
      * <pre>
      * Format image.
      * This should only be called once and only by constructor.
@@ -688,8 +697,8 @@ class Image {
                         for (let i = 3; i < this.image.data.length; i+=4) { this.image.data[i] = 0xFF }
 
                     //Saving data
-                        if (this.constructor.name === "Image") { this.size = this._size * 0.75 }
-                        this.signature = Image.SIGNATURE[this.constructor.name.toLocaleUpperCase()]||Image.SIGNATURE.UNKNOWN
+                        if (this.image_type === "Image") { this.size = this._size * 0.75 }
+                        this.signature = Image.SIGNATURE[this.image_type.toLocaleUpperCase()]||Image.SIGNATURE.UNKNOWN
                         this.crypted = data.crypted
                         this.entry_name = data.name
                         this.table_size = data.table
@@ -1240,6 +1249,14 @@ class PictureImage extends Image {
                 super(context, data)
         }
 
+    /**
+     * Constructor name (unaccessible otherwise because of minification).
+     * @type {String}
+     * @const
+     * @private
+     * @override
+     */
+        get image_type() { return "PictureImage" }
 
     /**
      * <pre>
@@ -1257,7 +1274,7 @@ class PictureImage extends Image {
                 if (data !== null) {
                     //Clean used bits and save size
                         for (let i = 0; i < this.image.data.length; i++) { this.image.data[i] &= 0b11111100 }
-                        if (this.constructor.name === "PictureImage") { this.size = this._size * 0.75 * 0.25 }
+                        if (this.image_type === "PictureImage") { this.size = this._size * 0.75 * 0.25 }
                 }
             super.format(data)
         }

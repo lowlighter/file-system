@@ -16,6 +16,14 @@ class PictureImage extends Image {
                 super(context, data)
         }
 
+    /**
+     * Constructor name (unaccessible otherwise because of minification).
+     * @type {String}
+     * @const
+     * @private
+     * @override
+     */
+        get image_type() { return "PictureImage" }
 
     /**
      * <pre>
@@ -33,7 +41,7 @@ class PictureImage extends Image {
                 if (data !== null) {
                     //Clean used bits and save size
                         for (let i = 0; i < this.image.data.length; i++) { this.image.data[i] &= 0b11111100 }
-                        if (this.constructor.name === "PictureImage") { this.size = this._size * 0.75 * 0.25 }
+                        if (this.image_type === "PictureImage") { this.size = this._size * 0.75 * 0.25 }
                 }
             super.format(data)
         }
