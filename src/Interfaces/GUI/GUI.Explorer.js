@@ -146,8 +146,8 @@
                             if (local.y > GUI.HEIGHT*GUI.INVERT_CONTEXT) { menu.css("bottom", GUI.HEIGHT-local.y) } else { menu.css("top", local.y) }
                         //Add user events
                             let lpath = context.attr("data-path"), npath = this.path(lpath)
-                            menu.find("li:nth-child(1)").click((ev) => { try { this.privileges(this.image.entry(npath), "w").gui_mkfile(lpath, context) } catch (e) { this.gui_error(e) } })
-                            menu.find("li:nth-child(2)").click((ev) => { try { this.privileges(this.image.entry(npath), "w").gui_mkdir(lpath, context) } catch (e) { this.gui_error(e) } })
+                            menu.find("li:nth-child(1)").click((ev) => { try { this.privileges(npath, "w").gui_mkfile(lpath, context) } catch (e) { this.gui_error(e) } })
+                            menu.find("li:nth-child(2)").click((ev) => { try { this.privileges(npath, "w").gui_mkdir(lpath, context) } catch (e) { this.gui_error(e) } })
                             menu.find("li:nth-child(3)").click((ev) => { context.attr("data-hidden", context.attr("data-hidden") == "show" ? "hidden" : "show") })
                             menu.find("li:nth-child(4)").click((ev) => { try { this.gui_properties(this.image.entry(npath)) } catch (e) { this.gui_error(e) } })
                             if (npath == 0) { menu.find("li:nth-child(4)").remove() }

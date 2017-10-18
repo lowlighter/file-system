@@ -1,7 +1,7 @@
 {
   "name": "lowlight",
-  "description": "",
-  "version": "1.0.0",
+  "description": "This library is an implementation of an \"homemade\" File System, similar to FAT. It's based on steganography so data can be stored and loaded from a supported image file. A GUI is also included with multiples applications.",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/lowlighter/"
@@ -9,12 +9,12 @@
   "author": "lowlight(er)",
   "license": "MIT",
   "dependencies": {
+    "babel-minify": "^0.2.0",
     "jsdoc": "^3.4.3",
     "less": "^2.7.2",
-    "less-plugin-clean-css": "^1.5.1",
-    "babili": "^0.1.4"
+    "less-plugin-clean-css": "^1.5.1"
   },
-  "scripts":{
+  "scripts": {
     "build": "node ./src/build.js"
   },
   "config": {

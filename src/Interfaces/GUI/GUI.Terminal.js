@@ -116,7 +116,7 @@
                                 name:parseInt((line.match(/-entry-name-length=(\d+)/)||[,32])[1]),
                                 extended:(line.match(/-table-extended=(y|n)/)||[,"y"])[1] === "y" ? 1 : 0,
                             }), this.context)) { return }
-                    case "help": li.text($(`[data-app-help=${args[1]||"help"}]`).text().trim()); break; 
+                    case "help": li.text($(`[data-app-help=${args[1]||"help"}]`).text().trim()); break;
                 default:
                     throw new Error(`Unknown command ${args[0]}`)
             }

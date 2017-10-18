@@ -8,7 +8,7 @@ A [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) is also included
 * [Documentation](https://lowlighter.github.io/file-system/docs/)
 * [About](https://lowlight.fr/en/blog/file-system/)
 
-![Image of file system](https://github.com/lowlighter/file-system/raw/master/demo/imgs/demo.png)
+![Image of file system](https://github.com/lowlighter/file-system/raw/master/demo/imgs/demo.gif)
 
 # Features
 * **Configurable** Image disk

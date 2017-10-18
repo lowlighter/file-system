@@ -209,12 +209,15 @@ class Interface {
 
     /**
      * Check privileges and throws an error if they're aren't enough.
-     * @param {Entry} entry - Entry to check
+     * @param {Entry|Number} entry - Entry to check
      * @param {String} [p="r"] - Right to check (r, w, x or d)
      * @return {Interface} Self
      * @throws {Error} Not enough privileges to perform action
      */
         privileges(entry, p = "r") {
+            if (typeof entry === "number") {
+                if (entry === 0) { return this } else { entry = this.image.entry(entry) }
+            }
             if ((this.admin_mode)||(!(entry instanceof Entry))) { return this }
             if (this.image.table_extended) {
                 if (!entry.permissions[entry.owner === this.user ? "u" : "o"][p]) { throw new Error("Not enough privileges to perform action") }
