@@ -1621,7 +1621,7 @@ class Interface {
 
     /**
      * Check privileges and throws an error if they're aren't enough.
-     * @param {Entry} entry - Entry to check
+     * @param {Entry|Number} entry - Entry to check
      * @param {String} [p="r"] - Right to check (r, w, x or d)
      * @return {Interface} Self
      * @throws {Error} Not enough privileges to perform action
