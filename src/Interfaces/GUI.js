@@ -28,6 +28,7 @@
         this.gui_image_manager()
         this.gui_image_steganography()
         this.context.append("<br />")
+        this.gui_image_save()
         this.gui_encrypt()
 
         this.context.contextmenu((ev) => {

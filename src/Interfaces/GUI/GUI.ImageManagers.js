@@ -47,11 +47,19 @@
             }
         //Retrieve uploaded file
             let file = $(ev.target).get(0).files[0]
-            if (file.size > 2000000) { throw new Error("Image too big") }
+            if (file.size > 5000000) { throw new Error("Image too big") }
             if ((FileReader)&&(file)) {
                 let fr = new FileReader()
                 fr.onload = () => { let img = $("<img>").attr("src", fr.result).on("load", () => open(img.get(0))) }
                 fr.readAsDataURL(file)
             } else { throw new Error("Invalid file or missing FileReader") }
         } catch (e) { this.gui_error(e) }
+    }
+
+/**
+ * Save image.
+ * @private
+ */
+    gui_image_save() {
+      this._gui_icon("image-save", GUI.TEXT.IMAGE_SAVE).appendTo(this.context).wrap($("<a>").attr("href", $(".app-view canvas").get(0).toDataURL()).prop("download", "image.png").css("background-color", "inherit").css("color", "inherit").css("font", "inherit"))
     }

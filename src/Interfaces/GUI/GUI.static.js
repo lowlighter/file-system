@@ -98,7 +98,8 @@
         STEGANOGRAPHY_INFO:$(".text-steganography-info").text(),
         SCRIPT:$(".text-script-msg").text(),
         SHOW_HIDDEN:$(".text-show-hidden").text(),
-        CLIPPY:$(".text-clippy-msg").text()
+        CLIPPY:$(".text-clippy-msg").text(),
+        IMAGE_SAVE:$(".text-image-save").text()
     }
 
 /**
