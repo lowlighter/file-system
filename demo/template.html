@@ -149,6 +149,157 @@
             <p class="text-script-msg">This script will delete audio file (very voluminous) and will launch a demo of steganography. This may take some time to perform.</p>
             <p class="text-show-hidden">Hidden entries</p>
             <p class="text-clippy-msg">Sometimes I just popup for no particular reason, like now</p>
+            <p class="text-image-save">Save image</p>
+
+            <table>
+                <tr data-app-help="help">
+                    <td><img src="gui/help.png" alt=""></td>
+                    <td><span class="bold">help</span> [command=help]</td>
+                    <td>Display help for a given command. Below is a list of available commands :<br><br>
+                    help, explorer, terminal, rm, mv, stat, chmod, chown, cd, mkdir, ls, tree, mkfile, edit, display, play, exec, su, adduser, deluser, users, whoami, encrypt, decrypt, pwd, env, dstat, dload, dformat.</td>
+                </tr>
+                <tr data-app-help="explorer">
+                    <td><img src="gui/explorer.png" alt=""></td>
+                    <td><span class="bold">explorer</span> [path=pwd]</td>
+                    <td>Open a new instance of file explorer</td>
+                </tr>
+                <tr data-app-help="terminal">
+                    <td><img src="gui/terminal.png" alt=""></td>
+                    <td><span class="bold">terminal</span></td>
+                    <td>Open a new command-line interface</td>
+                </tr>
+                <tr data-app-help="rm">
+                    <td rowspan="5"><img src="gui/entries.png" alt=""></td>
+                    <td><span class="bold">rm</span> &lt;path&gt; [-r]</td>
+                    <td>Remove an entry (add <span class="bold">-r</span> to remove recursively a folder)</td>
+                </tr>
+                <tr data-app-help="mv">
+                    <td><span class="bold">mv</span> &lt;path&gt; &lt;target&gt;</td>
+                    <td>Move an entry (add <span class="bold">-f</span> to target folders) and can also be used to rename an entry</td>
+                </tr>
+                <tr data-app-help="stat">
+                    <td><span class="bold">stat</span> &lt;path&gt;</td>
+                    <td>Display an entry properties (add <span class="bold">-f</span> to target folders)</td>
+                </tr>
+                <tr data-app-help="chmod">
+                    <td><span class="bold">chmod</span> &lt;path&gt; [-r|+r] [-w|+w] [-x|+x] [-d|+d] [-R|+R] [-W|+W] [-X|+X] [-D|+D] [-f]</td>
+                    <td>Edit entries permissions (add <span class="bold">+r</span>, <span class="bold">+w</span>, <span class="bold">+x</span>, <span class="bold">+d</span> to add read, write, execution and deletion rights
+                      and <span class="bold">-r</span>, <span class="bold">-w</span>, <span class="bold">-x</span>, <span class="bold">-d</span> to remove them. In lowercase for the owner and uppercase for the others. Add -f to target folders)</td>
+                </tr>
+                <tr data-app-help="chown">
+                    <td><span class="bold">chown</span> &lt;path&gt; &lt;user&gt; [-f]</td>
+                    <td>Change the owner of an entry (add <span class="bold">-f</span> to target folders)</td>
+                </tr>
+                <tr data-app-help="cd">
+                    <td><img src="gui/folder-parent.png" alt=""></td>
+                    <td><span class="bold">cd</span> [path=/home]</td>
+                    <td>Change current directory</td>
+                </tr>
+                <tr data-app-help="mkdir">
+                    <td><img src="gui/folder-empty.png" alt=""></td>
+                    <td><span class="bold">mkdir</span> &lt;path&gt;</td>
+                    <td>Create a new directory</td>
+                </tr>
+                <tr data-app-help="ls">
+                    <td rowspan="2"><img src="gui/folder-files.png" alt=""></td>
+                    <td><span class="bold">ls</span> [path=pwd] [-a] [-l] [-type=ALL|FOLDER|FILE]</td>
+                    <td>List entries of directory (add <span class="bold">-a</span> to show hidden entries, <span class="bold">-l</span> to display properties of each entries and <span class="bold">-type</span> to filter entries types)</td>
+                </tr>
+                <tr data-app-help="tree">
+                    <td><span class="bold">tree</span> [path=pwd] [-a]</td>
+                    <td>Display directory tree (add <span class="bold">-a</span> to show hidden entries)</td>
+                </tr>
+                <tr data-app-help="mkfile">
+                    <td><img src="gui/file-misc.png" alt=""></td>
+                    <td><span class="bold">mkfile</span> &lt;path&gt;</td>
+                    <td>Create a new file</td>
+                </tr>
+                <tr data-app-help="edit">
+                    <td><img src="gui/file-text.png" alt=""></td>
+                    <td><span class="bold">edit</span> &lt;path&gt;</td>
+                    <td>Open a file as a text file</td>
+                </tr>
+                <tr data-app-help="display">
+                    <td><img src="gui/file-img.png" alt=""></td>
+                    <td><span class="bold">display</span> &lt;path&gt;</td>
+                    <td>Open a file as an image file</td>
+                </tr>
+                <tr data-app-help="play">
+                    <td><img src="gui/file-audio.png" alt=""></td>
+                    <td><span class="bold">play</span> &lt;path&gt;</td>
+                    <td>Open a file as an audio file</td>
+                </tr>
+                <tr data-app-help="exec">
+                    <td><img src="gui/file-cmd.png" alt=""></td>
+                    <td><span class="bold">exec</span> &lt;path&gt;</td>
+                    <td>Open a file as a script file (context value is GUI instance)</td>
+                </tr>
+                <tr data-app-help="su">
+                    <td rowspan="5"><img src="gui/sessions.png" alt=""></td>
+                    <td><span class="bold">su</span> &lt;user&gt; &lt;password&gt;</td>
+                    <td>Login with another user account</td>
+                </tr>
+                <tr data-app-help="adduser">
+                    <td><span class="bold">adduser</span> &lt;user&gt; [password]</td>
+                    <td>Create a new user account</td>
+                </tr>
+                <tr data-app-help="deluser">
+                    <td><span class="bold">deluser</span> &lt;user&gt; &lt;password&gt;</td>
+                    <td>Delete an existing user account</td>
+                </tr>
+                <tr data-app-help="users">
+                    <td><span class="bold">users</span></td>
+                    <td>Display users list</td>
+                </tr>
+                <tr data-app-help="whoami">
+                    <td><span class="bold">whoami</span></td>
+                    <td>Display current user account name</td>
+                </tr>
+                <tr data-app-help="encrypt">
+                    <td rowspan="2"><img src="gui/encryption.png" alt=""></td>
+                    <td><span class="bold">encrypt</span> &lt;key&gt;</td>
+                    <td>Encrypt disk data</td>
+                </tr>
+                <tr data-app-help="decrypt">
+                    <td><span class="bold">decrypt</span> &lt;key&gt;</td>
+                    <td>Decrypt disk data</td>
+                </tr>
+                <tr data-app-help="pwd">
+                    <td rowspan="3"><img src="gui/config.png" alt=""></td>
+                    <td><span class="bold">pwd</span></td>
+                    <td>Display path working directory</td>
+                </tr>
+                <tr data-app-help="env">
+                    <td><span class="bold">env</span></td>
+                    <td>Display environnment variables</td>
+                </tr>
+                <tr data-app-help="dstat">
+                    <td><span class="bold">dstat</span></td>
+                    <td>Display disk properties</td>
+                </tr>
+                <tr data-app-help="dload">
+                    <td rowspan="2"><img src="gui/image-manager.png" alt=""></td>
+                    <td><span class="bold">dload</span></td>
+                    <td>Open disk loader</td>
+                </tr>
+                <tr data-app-help="dformat">
+                    <td><span class="bold">dformat</span> [-size=400x400] [-table-size=512] [-block-size=256] [-entry-name-length=8|16|24|32] [-table-extended=y|n]</td>
+                    <td>
+                        Create a new image (will reload interface after creation) where :
+                        <ul>
+                            <li><span class="bold">-size</span> is image size (NB : it also update canvas size !)</li>
+                            <li><span class="bold">-table-size</span> is maximum entries number in allocation table</li>
+                            <li><span class="bold">-block-size</span> it the unit size of block content</li>
+                        </ul>
+                        and
+                        <ul>
+                            <li><span class="bold">-entry-name-length</span> is the number of bytes allocated to entries' names</li>
+                            <li><span class="bold">-table-extended</span> enables extended table (add creation and last edition dates, and permissions for each users)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody></table>
+
         </div>
 
         <script type="text/javascript" src="./js/jquery.js"></script>
