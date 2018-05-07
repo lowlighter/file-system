@@ -4,9 +4,8 @@ It's based on [steganography](https://en.wikipedia.org/wiki/Steganography) so da
 *(Image must be drawable with [CanvasRenderingContext2D.drawImage](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage))*.
 A [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) is also included with multiples applications.
 
-* [Live demo](https://lowlighter.github.io/file-system/demo/)
-* [Documentation](https://lowlighter.github.io/file-system/docs/)
-* [About](https://lowlight.fr/en/blog/file-system/)
+* [Live demo](https://lowlight.fr/file-system/demo/)
+* [Documentation](https://lowlight.fr/file-system/docs/)
 
 ![Image of file system](https://github.com/lowlighter/file-system/raw/master/demo/imgs/demo.gif)
 
@@ -78,7 +77,7 @@ Then add the following code snippet :
 
 You may also add the stylesheet and pictures from `/demo` to have a nice GUI visual render.
 
-If you're a developper and want to expand library, you may want to read [documentation](https://lowlighter.github.io/file-system/docs/)
+If you're a developper and want to expand library, you may want to read [documentation](https://lowlight.fr/file-system/docs/)
 to understand how this project has been coded.
 
 Don't forget to check and update `src/Interfaces/GUI/Gui.static.js` to update text and icons.
